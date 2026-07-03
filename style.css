@@ -223,6 +223,10 @@ p { text-wrap: pretty; }
 .platform-points { display: flex; flex-direction: column; gap: var(--space-3); margin-block: var(--space-8); }
 .platform-points li { position: relative; padding-left: var(--space-6); font-size: var(--text-sm); color: rgba(255,255,255,.9); }
 .platform-points li::before { content:""; position:absolute; left:0; top:.55em; width:7px; height:7px; border-radius:50%; background: var(--color-primary); }
+.manager-pitch { margin-top: var(--space-10); padding: var(--space-8); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius-lg); }
+.manager-pitch h3 { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; color: #fff; margin-bottom: var(--space-4); line-height: 1.3; }
+.manager-pitch p { color: rgba(255,255,255,.82); margin-bottom: var(--space-3); max-width: 68ch; }
+.manager-pitch p:last-child { margin-bottom: 0; }
 
 .cert-levels { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-block: var(--space-8); max-width: 900px; }
 .cert-level { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: var(--space-5) var(--space-4); }
