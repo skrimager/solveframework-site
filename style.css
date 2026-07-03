@@ -26,6 +26,9 @@
   --color-bg: #FBF9F5;
   --color-surface: #FFFFFF;
   --color-surface-2: #F3EFE8;
+  --color-surface-3: #E9E4DA;
+  --color-border-strong: #C9C2B4;
+  --color-text-strong-muted: #3A4250;
   --color-border: #E4DFD5;
   --color-text: #0A1A30;
   --color-text-muted: #4B5768;
@@ -175,7 +178,7 @@ p { text-wrap: pretty; }
 .book-points li { position: relative; padding-left: var(--space-6); font-size: var(--text-sm); color: var(--color-text); }
 .book-points li::before { content: ""; position: absolute; left: 0; top: .55em; width: 7px; height: 7px; border-radius: 50%; background: var(--color-primary); }
 .cents-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-3); margin-bottom: var(--space-6); }
-.cents-grid li { text-align: center; background: var(--color-surface-2); border-radius: var(--radius-md); padding: var(--space-3) var(--space-2); font-size: var(--text-xs); color: var(--color-text-muted); }
+.cents-grid li { text-align: center; background: var(--color-surface-3); border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); padding: var(--space-3) var(--space-2); font-size: var(--text-xs); color: var(--color-text-strong-muted); }
 .cents-grid li span { display: block; font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-1); }
 .book-actions { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
 .book-note { font-size: var(--text-xs); color: var(--color-text-faint); max-width: 24ch; }
@@ -201,12 +204,12 @@ p { text-wrap: pretty; }
 @media (max-width: 700px) { .tier-grid { grid-template-columns: 1fr; } }
 
 /* ============== FRAMEWORK ============== */
-.framework-section { background: var(--color-bg); }
+.framework-section { background: var(--color-surface-3); }
 .framework-grid { margin-top: var(--space-16); display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-6); }
 .fw-step { text-align: center; padding: var(--space-6) var(--space-3); }
 .fw-letter { display: grid; place-items: center; width: 56px; height: 56px; margin-inline: auto var(--space-4); border-radius: 50%; background: var(--color-navy); color: var(--color-primary); font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; }
-.fw-step h3 { font-size: var(--text-sm); margin-bottom: var(--space-2); color: var(--color-navy); }
-.fw-step p { font-size: var(--text-xs); color: var(--color-text-muted); }
+.fw-step h3 { font-size: var(--text-base); margin-bottom: var(--space-2); color: var(--color-navy); }
+.fw-step p { font-size: var(--text-sm); color: var(--color-text-strong-muted); line-height: 1.55; }
 @media (max-width: 900px) { .framework-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ============== PLATFORM ============== */
