@@ -214,12 +214,23 @@ p { text-wrap: pretty; }
 .platform-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .35; }
 .platform-bg::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, var(--color-navy) 15%, rgba(10,26,48,.55) 60%, rgba(10,26,48,.2) 100%); }
 .platform-inner { position: relative; z-index: 1; }
-.platform-copy { max-width: 620px; }
+.platform-copy { max-width: 760px; }
 .platform-section .section-title { color: #fff; }
 .platform-section .section-sub { color: rgba(255,255,255,.75); }
 .platform-points { display: flex; flex-direction: column; gap: var(--space-3); margin-block: var(--space-8); }
 .platform-points li { position: relative; padding-left: var(--space-6); font-size: var(--text-sm); color: rgba(255,255,255,.9); }
 .platform-points li::before { content:""; position:absolute; left:0; top:.55em; width:7px; height:7px; border-radius:50%; background: var(--color-primary); }
+
+.cert-levels { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-block: var(--space-8); max-width: 900px; }
+.cert-level { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: var(--space-5) var(--space-4); }
+.cert-level h3 { color: #fff; font-size: var(--text-sm); margin: var(--space-2) 0 var(--space-2); }
+.cert-level p { color: rgba(255,255,255,.72); font-size: var(--text-xs); line-height: 1.5; margin: 0; }
+.cert-num { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.1); color: var(--color-primary); font-family: var(--font-display); font-weight: 700; font-size: var(--text-sm); }
+.cert-level-final { background: rgba(241,131,13,.14); border-color: rgba(241,131,13,.4); }
+.cert-level-final .cert-num { background: var(--color-primary); color: var(--color-navy); }
+.cert-level-final h3 { color: var(--color-primary); }
+@media (max-width: 900px) { .cert-levels { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .cert-levels { grid-template-columns: 1fr; } }
 
 /* ============== ABOUT ============== */
 .about-inner { display: grid; grid-template-columns: 280px 1fr; gap: var(--space-12); align-items: start; }
