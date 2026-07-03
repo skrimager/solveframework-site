@@ -229,7 +229,8 @@ p { text-wrap: pretty; }
 .manager-pitch p:last-child { margin-bottom: 0; }
 
 .cert-levels { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-block: var(--space-8); max-width: 900px; }
-.cert-level { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: var(--space-5) var(--space-4); }
+.cert-level { display: block; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: var(--space-5) var(--space-4); text-decoration: none; cursor: pointer; transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+.cert-level:hover, .cert-level:focus-visible { transform: translateY(-3px); border-color: var(--color-primary); background: rgba(255,255,255,.1); }
 .cert-level h3 { color: #fff; font-size: var(--text-sm); margin: var(--space-2) 0 var(--space-2); }
 .cert-level p { color: rgba(255,255,255,.72); font-size: var(--text-xs); line-height: 1.5; margin: 0; }
 .cert-num { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.1); color: var(--color-primary); font-family: var(--font-display); font-weight: 700; font-size: var(--text-sm); }
