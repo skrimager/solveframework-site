@@ -61,6 +61,23 @@
         <a href="#framework" class="btn btn-outline-invert btn-lg" data-testid="link-hero-framework">See the Framework</a>
       </div>
       <p class="hero-tagline reveal">Understand First. Solve Second. Close Naturally.</p>
+
+      <div class="hero-info-box reveal" id="hero-info-box">
+        <p class="hero-info-title">Get More Information</p>
+        <p class="hero-info-sub">Want the details before you dive in? Leave your name and email and we'll send you more on the framework and the platform.</p>
+        <form id="hero-info-form" class="hero-info-form" novalidate>
+          <label class="hero-info-field">
+            <span class="sr-only">Name</span>
+            <input type="text" name="name" placeholder="Your name" required autocomplete="name" data-testid="input-hero-info-name" />
+          </label>
+          <label class="hero-info-field">
+            <span class="sr-only">Email</span>
+            <input type="email" name="email" placeholder="Your email" required autocomplete="email" data-testid="input-hero-info-email" />
+          </label>
+          <button type="submit" class="btn btn-primary" data-testid="button-hero-info-submit">Send me info</button>
+        </form>
+        <p class="hero-info-status" id="hero-info-status" role="status" aria-live="polite"></p>
+      </div>
     </div>
   </section>
 
@@ -144,20 +161,20 @@
     <div class="wrap">
       <p class="eyebrow center">Simple, Transparent Pricing</p>
       <h2 class="section-title center">One Flat Fee. Volume Pricing Per Consultant.</h2>
-      <p class="section-sub center">$189/year gets your office unlimited use of the Manager Dashboard and full team tracking. Every consultant seat trains daily on real scenarios — unlimited roleplay, unlimited scoring — and the per-seat price drops automatically as your team grows. No hidden fees, no surprise overages.</p>
+      <p class="section-sub center">$189/month gets your office unlimited use of the Manager Dashboard and full team tracking. Every consultant seat trains daily on real scenarios — unlimited roleplay, unlimited scoring — and the per-seat price drops automatically as your team grows. No hidden fees, no surprise overages.</p>
 
       <div class="pricing-grid pricing-grid-single">
         <div class="price-card reveal">
           <p class="price-kicker">Manager Dashboard + User Portal</p>
-          <p class="price-amount"><span class="price-currency">$</span>189<span class="price-period">/year per office</span></p>
-          <p class="price-detail">One flat annual fee for unlimited dashboard and tracking access, for the life of your office</p>
+          <p class="price-amount"><span class="price-currency">$</span>189<span class="price-period">/mo per office</span></p>
+          <p class="price-detail">One flat monthly fee for unlimited dashboard and tracking access, cancel anytime</p>
           <ul class="price-features">
             <li>Full team dashboard &amp; live scoring analytics</li>
             <li>Level-progress tracking across the whole office</li>
             <li>Unlimited consultant scenario assignments</li>
             <li>Managers who want to train and certify add their own consultant seat</li>
           </ul>
-          <a href="mailto:hello@solveframework.com?subject=Manager%20Plan%20Inquiry" class="btn btn-outline" data-testid="link-pricing-manager">Request Access</a>
+          <button type="button" class="btn btn-outline" data-lead-open data-lead-source="manager-plan" data-testid="link-pricing-manager">Request Access</button>
         </div>
       </div>
 
@@ -182,7 +199,7 @@
           </div>
         </div>
         <p class="tier-features-note">Every tier includes unlimited roleplay practice with the AI customer, the full scenario library across every difficulty level, rubric-based scoring on the same 5-step SOLVE framework, and the SOLVE Framework Certification path.</p>
-        <a href="mailto:hello@solveframework.com?subject=Consultant%20Seats%20Inquiry" class="btn btn-primary" data-testid="link-pricing-consultant">Request Access</a>
+        <button type="button" class="btn btn-primary" data-lead-open data-lead-source="consultant-seats" data-testid="link-pricing-consultant">Request Access</button>
       </div>
 
       <div class="price-example reveal">
@@ -190,21 +207,21 @@
         <div class="price-example-grid">
           <div class="price-example-item">
             <p class="price-example-office">Small Office</p>
-            <p class="price-example-seats">5 consultants @ $29</p>
-            <p class="price-example-total">$145<span>/mo</span></p>
+            <p class="price-example-seats">Manager Dashboard + 5 consultants @ $29</p>
+            <p class="price-example-total">$334<span>/mo</span></p>
           </div>
           <div class="price-example-item">
             <p class="price-example-office">Growing Office</p>
-            <p class="price-example-seats">15 consultants @ $24</p>
-            <p class="price-example-total">$360<span>/mo</span></p>
+            <p class="price-example-seats">Manager Dashboard + 15 consultants @ $24</p>
+            <p class="price-example-total">$549<span>/mo</span></p>
           </div>
           <div class="price-example-item">
             <p class="price-example-office">Full Office</p>
-            <p class="price-example-seats">25 consultants @ $19</p>
-            <p class="price-example-total">$475<span>/mo</span></p>
+            <p class="price-example-seats">Manager Dashboard + 25 consultants @ $19</p>
+            <p class="price-example-total">$664<span>/mo</span></p>
           </div>
         </div>
-        <p class="price-annual-note">Manager Dashboard billed annually at $189/office/year — unlimited use of the dashboard and team tracking for that office. Consultant seats (including a manager's own seat, if they want to train and certify) are billed monthly: $29 each for seats 1–5, $24 each for seats 6–15, $19 each for seat 16 and up — the discount applies automatically as you add seats. Multi-office and franchise pricing available — <a href="mailto:hello@solveframework.com?subject=Multi-Office%20Pricing">contact us</a> to set up your organization.</p>
+        <p class="price-annual-note">Manager Dashboard billed monthly at $189/office/month — unlimited use of the dashboard and team tracking for that office. Consultant seats (including a manager's own seat, if they want to train and certify) are billed monthly: $29 each for seats 1–5, $24 each for seats 6–15, $19 each for seat 16 and up — the discount applies automatically as you add seats. Multi-office and franchise pricing available — <a href="mailto:hello@solveframework.com?subject=Multi-Office%20Pricing">contact us</a> to set up your organization.</p>
       </div>
     </div>
   </section>
@@ -345,6 +362,70 @@
     </nav>
   </div>
 </footer>
+
+<!-- Request Access lead form (opened by the pricing "Request Access" buttons) -->
+<div class="lead-modal" id="lead-modal" hidden>
+  <div class="lead-modal-backdrop" data-lead-close></div>
+  <div class="lead-modal-panel" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
+    <button type="button" class="lead-modal-x" data-lead-close aria-label="Close">&times;</button>
+    <h3 id="lead-modal-title" class="lead-modal-title">Request Access</h3>
+    <p class="lead-modal-sub">Tell us a bit about your office and we'll be in touch.</p>
+    <form id="lead-form" class="lead-form" novalidate>
+      <label class="lead-field">
+        <span>Name<span aria-hidden="true">*</span></span>
+        <input type="text" name="name" required autocomplete="name" data-testid="input-lead-name" />
+      </label>
+      <label class="lead-field">
+        <span>Email<span aria-hidden="true">*</span></span>
+        <input type="email" name="email" required autocomplete="email" data-testid="input-lead-email" />
+      </label>
+      <label class="lead-field">
+        <span>Company / Office <em>(optional)</em></span>
+        <input type="text" name="company" autocomplete="organization" data-testid="input-lead-company" />
+      </label>
+      <label class="lead-field">
+        <span>Message <em>(optional)</em></span>
+        <textarea name="message" rows="3" data-testid="input-lead-message"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary" data-testid="button-lead-submit">Send request</button>
+      <p class="lead-status" id="lead-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<!-- Anonymous, privacy-respecting page-view tracking. No cookies/localStorage:
+     a fresh random token per page load, fired once. -->
+<script>
+(function () {
+  var API_BASE = "https://training.solveframework.com";
+  window.__SOLVE_API_BASE = API_BASE;
+  var token = (window.crypto && window.crypto.randomUUID)
+    ? window.crypto.randomUUID()
+    : String(Date.now()) + "-" + Math.random().toString(16).slice(2);
+  var fired = false;
+  function track() {
+    if (fired) return;
+    fired = true;
+    try {
+      fetch(API_BASE + "/api/track-visit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          path: location.pathname + location.search,
+          referrer: document.referrer || "",
+          visitorToken: token
+        }),
+        keepalive: true
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    track();
+  } else {
+    window.addEventListener("DOMContentLoaded", track, { once: true });
+  }
+})();
+</script>
 
 <script src="script.js"></script>
 </body>
