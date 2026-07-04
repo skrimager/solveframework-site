@@ -324,6 +324,20 @@ p { text-wrap: pretty; }
 .membership-fine { font-size: var(--text-sm); color: var(--color-text-faint); max-width: 60ch; margin-inline: auto; }
 @media (max-width: 700px) { .tier-grid { grid-template-columns: 1fr; } }
 
+/* ============== HOOK / WHY IT WORKS ============== */
+.hook-section { background: var(--color-surface-2); }
+.hook-inner { max-width: var(--content-wide); margin-inline: auto; }
+.hook-lead { max-width: 68ch; font-size: var(--text-base); }
+.hook-lead strong { color: var(--color-navy); }
+.hook-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-block: var(--space-10); }
+.hook-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8) var(--space-6); text-align: center; }
+.hook-icon { display: inline-block; font-size: 1.9rem; margin-bottom: var(--space-4); }
+.hook-card h3 { font-size: var(--text-base); font-weight: 700; color: var(--color-navy); margin-bottom: var(--space-3); }
+.hook-card p { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
+.hook-closer { max-width: 68ch; margin: 0 auto; text-align: center; font-size: var(--text-base); color: var(--color-text-strong-muted); line-height: 1.65; }
+.hook-closer strong { color: var(--color-primary); }
+@media (max-width: 800px) { .hook-grid { grid-template-columns: 1fr; } }
+
 /* ============== FRAMEWORK ============== */
 .framework-section { background: var(--color-surface-3); }
 .framework-grid { margin-top: var(--space-16); display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-6); }
