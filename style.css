@@ -141,6 +141,10 @@ p { text-wrap: pretty; }
 .hero-inner { position: relative; z-index: 1; max-width: 760px; }
 .eyebrow { font-size: var(--text-xs); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
 .eyebrow.center { text-align: center; }
+
+.hero-badge { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-5); }
+.hero-badge span { display: inline-flex; align-items: center; font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); letter-spacing: -.01em; color: var(--color-navy-deep); background: var(--color-primary); padding: var(--space-2) var(--space-5); border-radius: var(--radius-full); }
+@media (max-width: 480px) { .hero-badge span { font-size: var(--text-sm); padding: var(--space-2) var(--space-4); } }
 .hero-title { font-size: var(--text-hero); font-weight: 600; letter-spacing: -.02em; margin-bottom: var(--space-6); }
 .hero-title em { font-style: normal; color: var(--color-primary); }
 .accent-dot { color: var(--color-primary); }
