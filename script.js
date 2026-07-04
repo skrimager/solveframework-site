@@ -125,3 +125,58 @@
       });
   });
 })();
+
+// Hero "Get More Information" box: lightweight name+email capture,
+// posts to the same /api/leads endpoint with its own source tag.
+(function () {
+  var form = document.getElementById('hero-info-form');
+  var status = document.getElementById('hero-info-status');
+  if (!form || !status) return;
+
+  var API_BASE = window.__SOLVE_API_BASE || 'https://training.solveframework.com';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    var name = (data.get('name') || '').toString().trim();
+    var email = (data.get('email') || '').toString().trim();
+    if (!name || !email) {
+      status.textContent = 'Please enter your name and email.';
+      status.className = 'hero-info-status hero-info-status-error';
+      return;
+    }
+
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+    status.textContent = 'Sending…';
+    status.className = 'hero-info-status';
+
+    fetch(API_BASE + '/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        company: '',
+        message: '',
+        source: 'hero-info-box'
+      })
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('bad status ' + res.status);
+        return res.json();
+      })
+      .then(function () {
+        form.reset();
+        status.textContent = "Thanks — check your inbox soon.";
+        status.className = 'hero-info-status hero-info-status-ok';
+      })
+      .catch(function () {
+        status.textContent = 'Something went wrong. Please try again.';
+        status.className = 'hero-info-status hero-info-status-error';
+      })
+      .finally(function () {
+        if (submitBtn) submitBtn.disabled = false;
+      });
+  });
+})();

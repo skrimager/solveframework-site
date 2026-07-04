@@ -148,6 +148,44 @@ p { text-wrap: pretty; }
 .hero-actions { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-10); }
 .hero-tagline { font-family: var(--font-accent); font-style: italic; font-size: var(--text-base); color: rgba(255,255,255,.65); }
 
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.hero-info-box {
+  margin-top: var(--space-10);
+  padding: var(--space-6);
+  max-width: 560px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(2px);
+}
+.hero-info-title { font-family: var(--font-display); font-weight: 600; font-size: var(--text-lg); color: #fff; margin-bottom: var(--space-2); }
+.hero-info-sub { font-size: var(--text-sm); color: rgba(255,255,255,.72); margin-bottom: var(--space-4); max-width: 480px; }
+.hero-info-form { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.hero-info-field { flex: 1 1 180px; }
+.hero-info-field input {
+  width: 100%;
+  padding: .7rem .9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+}
+.hero-info-field input::placeholder { color: rgba(255,255,255,.55); }
+.hero-info-field input:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; background: rgba(255,255,255,.12); }
+.hero-info-form .btn { flex: 0 0 auto; white-space: nowrap; }
+.hero-info-status { margin-top: var(--space-3); font-size: var(--text-sm); min-height: 1.2em; }
+.hero-info-status.hero-info-status-ok { color: #8FE3A6; }
+.hero-info-status.hero-info-status-error { color: #F7B4A0; }
+@media (max-width: 560px) {
+  .hero-info-box { padding: var(--space-5); }
+  .hero-info-form { flex-direction: column; align-items: stretch; }
+  .hero-info-field { flex: none; }
+  .hero-info-form .btn { width: 100%; }
+}
+
 /* ============== PROOF STRIP ============== */
 .proof-strip { background: var(--color-navy); color: #fff; }
 .proof-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); padding-block: var(--space-8); }
