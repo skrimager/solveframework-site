@@ -157,7 +157,7 @@
             <li>Unlimited consultant scenario assignments</li>
             <li>Managers who want to train and certify add their own consultant seat</li>
           </ul>
-          <a href="mailto:hello@solveframework.com?subject=Manager%20Plan%20Inquiry" class="btn btn-outline" data-testid="link-pricing-manager">Request Access</a>
+          <button type="button" class="btn btn-outline" data-lead-open data-lead-source="manager-plan" data-testid="link-pricing-manager">Request Access</button>
         </div>
       </div>
 
@@ -182,7 +182,7 @@
           </div>
         </div>
         <p class="tier-features-note">Every tier includes unlimited roleplay practice with the AI customer, the full scenario library across every difficulty level, rubric-based scoring on the same 5-step SOLVE framework, and the SOLVE Framework Certification path.</p>
-        <a href="mailto:hello@solveframework.com?subject=Consultant%20Seats%20Inquiry" class="btn btn-primary" data-testid="link-pricing-consultant">Request Access</a>
+        <button type="button" class="btn btn-primary" data-lead-open data-lead-source="consultant-seats" data-testid="link-pricing-consultant">Request Access</button>
       </div>
 
       <div class="price-example reveal">
@@ -345,6 +345,70 @@
     </nav>
   </div>
 </footer>
+
+<!-- Request Access lead form (opened by the pricing "Request Access" buttons) -->
+<div class="lead-modal" id="lead-modal" hidden>
+  <div class="lead-modal-backdrop" data-lead-close></div>
+  <div class="lead-modal-panel" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
+    <button type="button" class="lead-modal-x" data-lead-close aria-label="Close">&times;</button>
+    <h3 id="lead-modal-title" class="lead-modal-title">Request Access</h3>
+    <p class="lead-modal-sub">Tell us a bit about your office and we'll be in touch.</p>
+    <form id="lead-form" class="lead-form" novalidate>
+      <label class="lead-field">
+        <span>Name<span aria-hidden="true">*</span></span>
+        <input type="text" name="name" required autocomplete="name" data-testid="input-lead-name" />
+      </label>
+      <label class="lead-field">
+        <span>Email<span aria-hidden="true">*</span></span>
+        <input type="email" name="email" required autocomplete="email" data-testid="input-lead-email" />
+      </label>
+      <label class="lead-field">
+        <span>Company / Office <em>(optional)</em></span>
+        <input type="text" name="company" autocomplete="organization" data-testid="input-lead-company" />
+      </label>
+      <label class="lead-field">
+        <span>Message <em>(optional)</em></span>
+        <textarea name="message" rows="3" data-testid="input-lead-message"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary" data-testid="button-lead-submit">Send request</button>
+      <p class="lead-status" id="lead-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<!-- Anonymous, privacy-respecting page-view tracking. No cookies/localStorage:
+     a fresh random token per page load, fired once. -->
+<script>
+(function () {
+  var API_BASE = "https://training.solveframework.com";
+  window.__SOLVE_API_BASE = API_BASE;
+  var token = (window.crypto && window.crypto.randomUUID)
+    ? window.crypto.randomUUID()
+    : String(Date.now()) + "-" + Math.random().toString(16).slice(2);
+  var fired = false;
+  function track() {
+    if (fired) return;
+    fired = true;
+    try {
+      fetch(API_BASE + "/api/track-visit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          path: location.pathname + location.search,
+          referrer: document.referrer || "",
+          visitorToken: token
+        }),
+        keepalive: true
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    track();
+  } else {
+    window.addEventListener("DOMContentLoaded", track, { once: true });
+  }
+})();
+</script>
 
 <script src="script.js"></script>
 </body>
