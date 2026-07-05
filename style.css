@@ -136,9 +136,9 @@ p { text-wrap: pretty; }
 
 /* ============== HERO ============== */
 .hero { position: relative; background: var(--color-navy-deep); color: #fff; overflow: hidden; padding-block: clamp(var(--space-20), 12vw, 7rem) clamp(var(--space-16), 8vw, 5rem); }
-.hero-split { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(var(--space-10), 6vw, var(--space-16)); align-items: center; }
-.hero-inner { position: relative; z-index: 1; max-width: 620px; }
-.hero-visual { position: relative; z-index: 1; }
+.hero-split { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: clamp(var(--space-8), 4vw, var(--space-12)); align-items: center; }
+.hero-inner { position: relative; z-index: 1; max-width: 560px; }
+.hero-visual { position: relative; z-index: 1; max-width: 340px; margin-right: clamp(16px, 4vw, 48px); }
 .hero-device { position: relative; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 70px -20px rgba(0,0,0,.55); }
 .hero-device img { display: block; width: 100%; height: auto; }
 .hero-device--flush { border: none; box-shadow: none; border-radius: 0; background: transparent; overflow: visible; }
@@ -156,7 +156,7 @@ p { text-wrap: pretty; }
 .hero-badge { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-5); }
 .hero-badge span { display: inline-flex; align-items: center; font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); letter-spacing: -.01em; color: var(--color-navy-deep); background: var(--color-primary); padding: var(--space-2) var(--space-5); border-radius: var(--radius-full); }
 @media (max-width: 480px) { .hero-badge span { font-size: var(--text-sm); padding: var(--space-2) var(--space-4); } }
-.hero-title { font-size: clamp(2.25rem, 1rem + 4vw, 3.75rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.08; margin-bottom: var(--space-6); }
+.hero-title { font-size: clamp(1.85rem, 0.85rem + 3.2vw, 3rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.1; margin-bottom: var(--space-6); }
 .hero-title em { font-style: normal; color: var(--color-primary); }
 .accent-dot { color: var(--color-primary); }
 .hero-sub { font-size: var(--text-lg); color: rgba(255,255,255,.82); max-width: 620px; margin-bottom: var(--space-8); }
