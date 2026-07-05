@@ -113,7 +113,7 @@
       })
       .then(function () {
         form.reset();
-        status.textContent = "Thanks — we've got your request and will be in touch shortly.";
+        status.textContent = "Thanks, we've got your request and will be in touch shortly.";
         status.className = 'lead-status lead-status-ok';
       })
       .catch(function () {
@@ -168,7 +168,7 @@
       })
       .then(function () {
         form.reset();
-        status.textContent = "Thanks — check your inbox soon.";
+        status.textContent = "Thanks, check your inbox soon.";
         status.className = 'hero-info-status hero-info-status-ok';
       })
       .catch(function () {
