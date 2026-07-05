@@ -141,6 +141,8 @@ p { text-wrap: pretty; }
 .hero-visual { position: relative; z-index: 1; }
 .hero-device { position: relative; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 70px -20px rgba(0,0,0,.55); }
 .hero-device img { display: block; width: 100%; height: auto; }
+.hero-device--flush { border: none; box-shadow: none; border-radius: 0; background: transparent; overflow: visible; }
+.hero-device--flush img { border-radius: 0; }
 @media (max-width: 900px) {
   .hero-split { grid-template-columns: 1fr; }
   .hero-visual { order: -1; max-width: 480px; margin-inline: auto; }
