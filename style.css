@@ -137,13 +137,13 @@ p { text-wrap: pretty; }
 
 /* ============== HERO ============== */
 .hero { position: relative; background: var(--color-navy-deep); color: #fff; overflow: visible; padding-block: clamp(var(--space-12), 8vw, 4.5rem) clamp(var(--space-16), 8vw, 5rem); }
-.hero-split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr); gap: clamp(var(--space-6), 3vw, var(--space-10)); align-items: center; }
-.hero-inner { position: relative; z-index: 1; max-width: 560px; padding-top: clamp(var(--space-6), 4vw, var(--space-10)); }
-.hero-visual { position: relative; z-index: 1; width: 100%; max-width: 520px; margin-left: auto; margin-right: 0; align-self: center; display: flex; justify-content: flex-end; }
+.hero-split { display: grid; grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); gap: clamp(var(--space-4), 2vw, var(--space-8)); align-items: center; }
+.hero-inner { position: relative; z-index: 1; max-width: 480px; padding-top: clamp(var(--space-6), 4vw, var(--space-10)); }
+.hero-visual { position: relative; z-index: 1; width: 100%; max-width: none; margin-left: auto; margin-right: 0; align-self: center; display: flex; justify-content: flex-end; padding-right: clamp(4px, 1vw, 16px); }
 .hero-device { position: relative; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 70px -20px rgba(0,0,0,.55); }
 .hero-device img { display: block; width: 100%; height: auto; }
-.hero-device--flush { border: none; box-shadow: none; border-radius: 0; background: transparent; overflow: visible; max-height: 640px; }
-.hero-device--flush img { border-radius: 0; width: auto; height: 100%; max-height: 640px; max-width: 100%; object-fit: contain; }
+.hero-device--flush { border: none; box-shadow: none; border-radius: 0; background: transparent; overflow: visible; max-height: 760px; }
+.hero-device--flush img { border-radius: 0; width: auto; height: 100%; max-height: 760px; max-width: 100%; object-fit: contain; }
 @media (max-width: 900px) {
   .hero-split { grid-template-columns: 1fr; }
   .hero-visual { order: -1; max-width: 480px; margin-inline: auto; }
