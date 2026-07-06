@@ -448,8 +448,22 @@ p { text-wrap: pretty; }
 
 /* ============== FINAL CTA ============== */
 .cta-band { background: var(--color-navy-deep); color: #fff; padding-block: var(--space-24); text-align: center; }
-.cta-title { font-size: var(--text-2xl); font-weight: 600; margin-bottom: var(--space-8); max-width: 720px; margin-inline: auto; }
+.cta-title { font-size: var(--text-2xl); font-weight: 600; margin-bottom: var(--space-5); max-width: 820px; margin-inline: auto; }
+.cta-sub { font-size: var(--text-base); color: rgba(255,255,255,.78); max-width: 640px; margin: 0 auto var(--space-8); }
 .cta-inner .hero-actions { justify-content: center; margin-bottom: 0; }
+.cta-inner .hero-tagline { margin-top: var(--space-6); }
+
+/* Hero trust line + secondary text (new copy, existing tokens only) */
+.hero-trust { font-size: var(--text-sm); color: rgba(255,255,255,.7); max-width: 460px; margin-top: var(--space-4); }
+.hero-trust em { font-style: normal; color: var(--color-primary); }
+.hero-inner .hero-tagline { margin-top: var(--space-2); }
+
+/* Why SOLVE Is Different + Why Companies Buy SOLVE (reuse existing grid/card patterns) */
+.why-different-grid { grid-template-columns: repeat(4, 1fr); margin-bottom: var(--space-12); }
+.why-different-grid .fw-letter { background: var(--color-navy); color: var(--color-primary); }
+.why-buy-grid { margin-bottom: 0; }
+.why-buy-grid .hook-card { text-align: left; }
+@media (max-width: 900px) { .why-different-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ============== FOOTER ============== */
 .site-footer { background: var(--color-navy); color: rgba(255,255,255,.7); padding-block: var(--space-12); }
