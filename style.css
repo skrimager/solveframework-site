@@ -309,7 +309,7 @@ p { text-wrap: pretty; }
 /* Manager card is now solo — center it and cap width so it doesn't stretch full-bleed */
 .pricing-grid-single { grid-template-columns: 1fr; max-width: 520px; }
 
-/* Per-consultant graduated tier block (namespaced vtier- to avoid clashing with membership .tier-grid) */
+/* Per-consultant flat-per-tier block (namespaced vtier- to avoid clashing with membership .tier-grid) */
 .tier-block { margin-top: var(--space-16); max-width: var(--content-wide); margin-inline: auto; text-align: center; }
 .tier-block-label { font-size: var(--text-sm); font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-8); }
 .vtier-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-bottom: var(--space-8); }
