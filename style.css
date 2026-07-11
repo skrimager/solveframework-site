@@ -313,7 +313,6 @@ p { text-wrap: pretty; }
 .tier-block { margin-top: var(--space-16); max-width: var(--content-wide); margin-inline: auto; text-align: center; }
 .tier-block-label { font-size: var(--text-sm); font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-8); }
 .vtier-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-bottom: var(--space-8); }
-.vtier-grid-5 { grid-template-columns: repeat(5, 1fr); }
 .vtier-card { position: relative; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8) var(--space-6); }
 .vtier-card-featured { background: var(--color-navy); border-color: var(--color-navy); color: #fff; transform: scale(1.04); }
 .vtier-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--color-primary); color: #fff; font-size: var(--text-xs); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: var(--space-1) var(--space-4); border-radius: var(--radius-full); white-space: nowrap; }
