@@ -61,7 +61,7 @@
 }
 
 /* Dark surfaces are used deliberately for hero/platform/cta bands — not a toggle, this is brand-driven */
-html { -webkit-text-size-adjust: none; text-size-adjust: none; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; scroll-padding-top: 84px; overflow-x: hidden; }
+html { -webkit-text-size-adjust: none; text-size-adjust: none; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
   min-height: 100dvh;
   overflow-x: hidden;
@@ -126,9 +126,14 @@ p { text-wrap: pretty; }
   position: sticky; top: 0; z-index: 100;
   background: rgba(251,249,245,.85); backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), background var(--transition);
 }
-.header-inner { display: flex; align-items: center; gap: var(--space-8); padding-block: var(--space-4); }
+.site-header--scrolled {
+  background: rgba(251,249,245,.94);
+  box-shadow: 0 6px 20px rgba(5,22,45,.10);
+}
+.header-inner { display: flex; align-items: center; gap: var(--space-8); padding-block: var(--space-4); transition: padding-block var(--transition); }
+.site-header--scrolled .header-inner { padding-block: var(--space-2); }
 .logo { display: flex; align-items: center; gap: var(--space-2); font-family: var(--font-display); font-weight: 600; font-size: var(--text-base); color: var(--color-navy); margin-right: auto; }
 .logo-dot { color: var(--color-primary); }
 .main-nav { display: flex; gap: var(--space-8); }

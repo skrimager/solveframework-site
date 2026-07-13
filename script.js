@@ -15,6 +15,24 @@
   });
 })();
 
+// Compact-on-scroll header: add a subtle shrink + shadow once past the top
+(function () {
+  var header = document.getElementById('site-header');
+  if (!header) return;
+  var ticking = false;
+  function apply() {
+    header.classList.toggle('site-header--scrolled', window.scrollY > 40);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(apply);
+      ticking = true;
+    }
+  }, { passive: true });
+  apply();
+})();
+
 // Scroll reveal
 (function () {
   var items = document.querySelectorAll('.reveal');
