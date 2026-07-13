@@ -163,7 +163,20 @@ p { text-wrap: pretty; }
 .hero-title { font-size: clamp(1.85rem, 0.85rem + 3.2vw, 3rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.1; margin-bottom: var(--space-4); }
 .hero-title em { font-style: normal; color: var(--color-primary); }
 .accent-dot { color: var(--color-primary); }
-.hero-sub { font-size: var(--text-lg); color: rgba(255,255,255,.82); max-width: 620px; margin-bottom: var(--space-8); }
+.hero-sub { font-size: var(--text-lg); color: rgba(255,255,255,.82); max-width: 620px; margin-bottom: var(--space-6); }
+.hero-pitch {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(var(--text-lg), 1.1rem + 1.2vw, var(--text-xl));
+  line-height: 1.2;
+  color: #fff;
+  max-width: 620px;
+  margin-bottom: var(--space-8);
+  padding: var(--space-5) var(--space-6);
+  border-left: 4px solid var(--color-primary);
+  background: rgba(240,131,13,.10);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
 .hero-actions { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-10); }
 .hero-tagline { font-family: var(--font-accent); font-style: italic; font-size: var(--text-base); color: rgba(255,255,255,.65); }
 
@@ -337,6 +350,55 @@ p { text-wrap: pretty; }
 
 @media (max-width: 480px) {
   .vtier-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Value-first checklist (Every seat includes) ---- */
+.value-stack { margin: var(--space-12) auto 0; max-width: var(--content-default); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: clamp(var(--space-6), 4vw, var(--space-10)); box-shadow: var(--shadow-sm); }
+.value-stack-label { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); color: var(--color-navy); margin-bottom: var(--space-6); text-align: center; }
+.value-list { display: grid; gap: var(--space-4); }
+.value-list li { position: relative; padding-left: var(--space-8); font-size: var(--text-base); color: var(--color-text); line-height: 1.5; }
+.value-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; display: inline-flex; align-items: center; justify-content: center; width: 1.4em; height: 1.4em; border-radius: var(--radius-full); background: var(--color-primary); color: #fff; font-size: .75em; font-weight: 700; }
+@media (min-width: 720px) { .value-list { grid-template-columns: repeat(2, 1fr); gap: var(--space-4) var(--space-8); } }
+
+/* ---- ROI band ---- */
+.roi-band { margin: var(--space-16) auto 0; max-width: var(--content-default); background: var(--color-navy); color: #fff; border-radius: var(--radius-xl); padding: clamp(var(--space-8), 5vw, var(--space-12)); text-align: center; box-shadow: var(--shadow-lg); }
+.roi-title { font-size: var(--text-xl); color: #fff; margin-bottom: var(--space-3); }
+.roi-copy { font-size: var(--text-base); color: rgba(255,255,255,.82); max-width: 60ch; margin: 0 auto var(--space-8); }
+.roi-calc { max-width: 460px; margin: 0 auto; }
+.roi-label { display: block; font-size: var(--text-sm); font-weight: 600; color: rgba(255,255,255,.9); margin-bottom: var(--space-3); }
+.roi-input-wrap { display: flex; align-items: center; gap: var(--space-2); background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.25); border-radius: var(--radius-md); padding: .35rem .75rem; }
+.roi-input-wrap:focus-within { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+.roi-currency { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); color: var(--color-primary); }
+.roi-input-wrap input { flex: 1; background: none; border: none; color: #fff; font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); padding: .5rem 0; }
+.roi-input-wrap input:focus { outline: none; }
+.roi-input-wrap input::placeholder { color: rgba(255,255,255,.45); font-weight: 400; }
+.roi-result { margin-top: var(--space-5); font-size: var(--text-base); font-weight: 600; color: var(--color-primary-highlight); min-height: 2.5em; line-height: 1.4; }
+
+/* ---- Manager dashboard pricing block ---- */
+.dashboard-block { margin: var(--space-16) auto 0; max-width: var(--content-wide); text-align: center; }
+.dashboard-lead-title { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-navy); margin-bottom: var(--space-3); }
+.dashboard-lead { font-size: var(--text-base); color: var(--color-text-muted); max-width: 68ch; margin: 0 auto var(--space-8); }
+.dashboard-deadline { max-width: 72ch; margin: 0 auto var(--space-10); background: var(--color-primary-highlight); border: 1px solid var(--color-primary); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6); }
+.dashboard-deadline p { font-size: var(--text-sm); color: #6a3400; line-height: 1.55; }
+.dashboard-deadline strong { color: var(--color-primary-active); }
+.dashboard-price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-bottom: var(--space-10); text-align: left; }
+.dash-price-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8) var(--space-6); }
+.dash-price-card-featured { border-color: var(--color-primary); box-shadow: var(--shadow-md); }
+.dash-tier { font-size: var(--text-sm); font-weight: 700; color: var(--color-navy); margin-bottom: var(--space-4); }
+.dash-standard { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-border); margin-bottom: var(--space-4); }
+.dash-standard-label { font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: .04em; }
+.dash-standard-amt { font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); color: var(--color-text-faint); text-decoration: line-through; }
+.dash-standard-amt span { font-family: var(--font-body); font-size: var(--text-xs); font-weight: 400; text-decoration: none; }
+.dash-lock-label { font-size: var(--text-xs); font-weight: 600; color: var(--color-primary); text-transform: uppercase; letter-spacing: .03em; margin-bottom: var(--space-2); }
+.dash-lock-amt { font-family: var(--font-display); font-weight: 700; font-size: var(--text-2xl); color: var(--color-navy); line-height: 1; margin-bottom: var(--space-2); }
+.dash-lock-amt span { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 400; color: var(--color-text-muted); }
+.dash-annual { font-size: var(--text-sm); font-weight: 600; color: var(--color-primary-active); }
+.dashboard-features { max-width: 72ch; margin: 0 auto var(--space-8); display: grid; gap: var(--space-3); text-align: left; }
+.dashboard-features li { position: relative; padding-left: var(--space-6); font-size: var(--text-sm); color: var(--color-text); }
+.dashboard-features li::before { content: ""; position: absolute; left: 0; top: .55em; width: 7px; height: 7px; border-radius: 50%; background: var(--color-primary); }
+.dashboard-billing-note { font-size: var(--text-xs); color: var(--color-text-faint); max-width: 72ch; margin: 0 auto var(--space-8); line-height: 1.6; }
+@media (max-width: 800px) {
+  .dashboard-price-grid { grid-template-columns: 1fr; }
 }
 
 /* ============== MEMBERSHIP ============== */
