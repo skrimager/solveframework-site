@@ -490,6 +490,8 @@ p { text-wrap: pretty; }
 .legal-body p { color: var(--color-text-muted); margin-bottom: var(--space-4); }
 .legal-body ul { list-style: disc; padding-left: var(--space-6); margin-bottom: var(--space-4); }
 .legal-body li { color: var(--color-text-muted); margin-bottom: var(--space-2); }
+.legal-body .marks-tree ul { margin-top: var(--space-2); margin-bottom: 0; list-style: circle; }
+.legal-body .marks-tree .marks-credentials { list-style: square; font-size: var(--text-sm); }
 .legal-body strong { color: var(--color-navy); font-weight: 600; }
 .legal-body a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
 .legal-body a:hover { color: var(--color-primary-hover); }
