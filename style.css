@@ -454,6 +454,9 @@ p { text-wrap: pretty; }
 .hook-card p { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
 .hook-closer { max-width: 68ch; margin: 0 auto; text-align: center; font-size: var(--text-base); color: var(--color-text-strong-muted); line-height: 1.65; }
 .hook-closer strong { color: var(--color-primary); }
+.why-different-copy { max-width: 68ch; margin: var(--space-8) auto 0; text-align: center; }
+.why-different-copy p { font-size: var(--text-base); color: var(--color-text-strong-muted); line-height: 1.7; margin-bottom: var(--space-5); }
+.why-different-copy strong { color: var(--color-primary); }
 
 .creator-strip { display: flex; align-items: center; gap: var(--space-5); max-width: 68ch; margin: var(--space-8) auto 0; padding: var(--space-5); background: var(--color-surface-2); border-radius: var(--radius-lg); }
 .creator-strip-photo { width: 64px; height: 64px; border-radius: var(--radius-full); object-fit: cover; flex-shrink: 0; }
