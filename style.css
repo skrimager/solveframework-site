@@ -539,6 +539,16 @@ p { text-wrap: pretty; }
 .about-photo { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
 .about-lede { font-family: var(--font-accent); font-style: italic; font-size: var(--text-lg); color: var(--color-primary); margin-bottom: var(--space-5); }
 .about-copy p { color: var(--color-text-muted); margin-bottom: var(--space-4); max-width: 62ch; }
+.about-pull { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); color: var(--color-navy); line-height: 1.35; margin: var(--space-6) 0; max-width: 56ch; }
+.about-booklist-label { font-weight: 700; color: var(--color-navy); margin-bottom: var(--space-2) !important; }
+.about-booklist { list-style: none; margin: 0 0 var(--space-4); padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.about-booklist li { position: relative; padding-left: var(--space-5); color: var(--color-text-muted); font-weight: 600; max-width: 62ch; }
+.about-booklist li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: var(--radius-full); background: var(--color-primary); }
+.about-triad { font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-navy); line-height: 1.5; margin: var(--space-6) 0; }
+.about-triad strong { color: var(--color-primary); }
+.about-divider { border: none; border-top: 1px solid var(--color-border); margin: var(--space-8) 0; }
+.about-signature { font-weight: 700; color: var(--color-navy); line-height: 1.6; margin-bottom: var(--space-4) !important; }
+.about-tagline.about-lede { margin-bottom: var(--space-6); }
 .about-note { font-size: var(--text-sm); font-weight: 600; color: var(--color-navy); }
 @media (max-width: 750px) { .about-inner { grid-template-columns: 1fr; } .about-photo { width: 160px; } }
 
