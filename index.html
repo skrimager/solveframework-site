@@ -266,6 +266,7 @@
         </ul>
         <div class="book-actions">
           <a href="https://solve-framework-trainer.onrender.com" class="btn btn-primary btn-lg" data-testid="link-platform-cta">Start Practicing</a>
+          <a href="https://training.solveframework.com/#/dashboard-demo" class="btn btn-outline-invert btn-lg" data-testid="link-managers-dashboard-demo">Explore the Demo Dashboard <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
@@ -368,6 +369,63 @@
       </div>
     </div>
   </section>
+
+  <!--
+  HIDDEN: Results/testimonials section. Not yet live.
+  To publish: remove the HTML comment markers wrapping this section (the opening marker
+  above the RESULTS section and the closing marker after the RESULTS section closes)
+  and replace all [PLACEHOLDER] content with real testimonials, names, titles,
+  companies, and metrics.
+
+  <section class="section results-section" id="results">
+    <div class="wrap">
+      <p class="eyebrow center">Results</p>
+      <h2 class="section-title center">[PLACEHOLDER HEADLINE — e.g. "Teams that practice, perform."]</h2>
+      <p class="section-sub center">[PLACEHOLDER SUBHEAD — one line framing the proof point.]</p>
+
+      <div class="results-metrics reveal">
+        <div class="results-metric">
+          <p class="results-metric-number">[X]%</p>
+          <p class="results-metric-label">[PLACEHOLDER — e.g. average score improvement]</p>
+        </div>
+        <div class="results-metric">
+          <p class="results-metric-number">[X]%</p>
+          <p class="results-metric-label">[PLACEHOLDER — e.g. faster certification time]</p>
+        </div>
+        <div class="results-metric">
+          <p class="results-metric-number">[X]%</p>
+          <p class="results-metric-label">[PLACEHOLDER — e.g. reduction in onboarding time]</p>
+        </div>
+      </div>
+
+      <div class="results-grid">
+        <blockquote class="result-card reveal">
+          <p class="result-quote">"[PLACEHOLDER TESTIMONIAL QUOTE — one to two sentences on the concrete outcome this manager or rep saw after using SOLVE.]"</p>
+          <footer class="result-attrib">
+            <p class="result-name">[PLACEHOLDER NAME]</p>
+            <p class="result-role">[PLACEHOLDER TITLE], [PLACEHOLDER COMPANY]</p>
+          </footer>
+        </blockquote>
+        <blockquote class="result-card reveal">
+          <p class="result-quote">"[PLACEHOLDER TESTIMONIAL QUOTE — one to two sentences on the concrete outcome this manager or rep saw after using SOLVE.]"</p>
+          <footer class="result-attrib">
+            <p class="result-name">[PLACEHOLDER NAME]</p>
+            <p class="result-role">[PLACEHOLDER TITLE], [PLACEHOLDER COMPANY]</p>
+          </footer>
+        </blockquote>
+        <blockquote class="result-card reveal">
+          <p class="result-quote">"[PLACEHOLDER TESTIMONIAL QUOTE — one to two sentences on the concrete outcome this manager or rep saw after using SOLVE.]"</p>
+          <footer class="result-attrib">
+            <p class="result-name">[PLACEHOLDER NAME]</p>
+            <p class="result-role">[PLACEHOLDER TITLE], [PLACEHOLDER COMPANY]</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  END HIDDEN: Results/testimonials section.
+  -->
 
   <!-- PRICING -->
   <section class="section pricing-section" id="pricing">
@@ -486,7 +544,10 @@
 
         <p class="dashboard-billing-note">All pricing is monthly. Seats are per-seat, per-month; the dashboard is per-month. &ldquo;Annual prepay&rdquo; means paying 12 months upfront for an extra 20% off the dashboard only; seats are never discounted. The underlying rates stay monthly, and every discounted figure shown is a monthly-equivalent rate, not an annual total. The standard monthly dashboard is billed monthly, cancel anytime. After the deadline, the 20% annual discount applies to the standard rate instead, for example, Office at $778 becomes $622/mo equivalent, paid annually.</p>
 
-        <button type="button" class="btn btn-primary" data-lead-open data-lead-source="manager-plan" data-testid="link-pricing-manager">Request Access</button>
+        <div class="dashboard-cta-row">
+          <button type="button" class="btn btn-primary" data-lead-open data-lead-source="manager-plan" data-testid="link-pricing-manager">Request Access</button>
+          <a href="https://training.solveframework.com/#/dashboard-demo" class="btn btn-outline" data-testid="link-pricing-dashboard-demo">Explore the Demo Dashboard <span aria-hidden="true">→</span></a>
+        </div>
       </div>
 
       <div class="price-example reveal">
@@ -670,6 +731,7 @@
       <div class="hero-actions">
         <a href="https://training.solveframework.com/#/demo" class="btn btn-primary btn-lg">Try the Demo</a>
         <a href="#books" class="btn btn-outline-invert btn-lg">Get the Books</a>
+        <a href="https://training.solveframework.com/#/dashboard-demo" class="btn btn-outline-invert btn-lg" data-testid="link-cta-dashboard-demo">See the Dashboard</a>
       </div>
       <p class="hero-tagline">Three Free Practice Sessions · No credit card required.</p>
     </div>
