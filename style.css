@@ -378,7 +378,7 @@ p { text-wrap: pretty; }
 .value-stack-label { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); color: var(--color-navy); margin-bottom: var(--space-6); text-align: center; }
 .value-list { display: grid; gap: var(--space-4); }
 .value-list li { position: relative; padding-left: var(--space-8); font-size: var(--text-base); color: var(--color-text); line-height: 1.5; }
-.value-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; display: inline-flex; align-items: center; justify-content: center; width: 1.4em; height: 1.4em; border-radius: var(--radius-full); background: var(--color-primary); color: #fff; font-size: .75em; font-weight: 700; }
+.value-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; display: inline-flex; align-items: center; justify-content: center; width: 1.4em; height: 1.4em; border-radius: var(--radius-full); background: #C6F135; color: var(--color-navy-deep); font-size: .75em; font-weight: 700; }
 @media (min-width: 720px) { .value-list { grid-template-columns: repeat(2, 1fr); gap: var(--space-4) var(--space-8); } }
 
 /* ---- ROI band ---- */
