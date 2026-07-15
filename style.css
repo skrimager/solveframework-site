@@ -201,6 +201,21 @@ p { text-wrap: pretty; }
 .hero-actions { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-10); }
 .hero-tagline { font-family: var(--font-accent); font-style: italic; font-size: var(--text-base); color: rgba(255,255,255,.65); }
 
+.hero-login {
+  margin-top: var(--space-6);
+  padding: var(--space-5) var(--space-6);
+  max-width: 620px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: var(--radius-lg);
+}
+.hero-login-label { font-weight: 600; color: #fff; font-size: var(--text-base); margin-bottom: var(--space-4); }
+.hero-login-actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.hero-login-btn { flex: 1 1 auto; min-width: 180px; }
+@media (max-width: 640px) {
+  .hero-login-btn { flex: 1 1 100%; width: 100%; font-size: var(--text-lg); }
+}
+
 .hero-hook {
   margin-top: clamp(var(--space-12), 6vw, var(--space-16));
   padding: var(--space-6);
