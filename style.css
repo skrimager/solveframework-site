@@ -589,6 +589,12 @@ p { text-wrap: pretty; }
 .why-buy-grid .hook-card { text-align: left; }
 @media (max-width: 900px) { .why-different-grid { grid-template-columns: repeat(2, 1fr); } }
 
+/* Objection handling research strip (bordered surface, existing tokens, no lime) */
+.research-strip { max-width: 68ch; margin: var(--space-10) auto 0; padding: var(--space-6); background: var(--color-surface-2); border: 1px solid var(--color-border-strong); border-radius: var(--radius-lg); text-align: left; }
+.research-strip-title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); color: var(--color-navy); margin-bottom: var(--space-4); text-align: center; }
+.research-strip-item { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.55; }
+.research-strip-item + .research-strip-item { margin-top: var(--space-3); }
+
 /* SOLVE vs. Do-It-Yourself AI comparison (semantic table, existing tokens) */
 .compare-wrap { margin-top: var(--space-10); overflow-x: auto; }
 .compare-table { width: 100%; border-collapse: collapse; min-width: 640px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); overflow: hidden; }
