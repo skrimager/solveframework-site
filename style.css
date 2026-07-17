@@ -516,6 +516,8 @@ p { text-wrap: pretty; }
 .screenshot-card figcaption { padding: var(--space-4) var(--space-5); font-size: var(--text-xs); color: rgba(255,255,255,.75); line-height: 1.5; }
 @media (max-width: 900px) { .screenshot-grid { grid-template-columns: 1fr; } }
 
+.highlight-accent { color: var(--color-primary); font-weight: 700; }
+
 /* ============== LEADERSHIP / CONFLICT MANAGEMENT ============== */
 .leadership-section { background: var(--color-surface-2); }
 .leadership-tracks { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); max-width: 760px; margin: var(--space-10) auto var(--space-12); }
