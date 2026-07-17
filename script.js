@@ -151,6 +151,7 @@
         name: name,
         email: email,
         company: (data.get('company') || '').toString().trim(),
+        referredBy: (data.get('referredBy') || '').toString().trim(),
         message: (data.get('message') || '').toString().trim(),
         source: currentSource
       })
