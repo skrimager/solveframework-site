@@ -169,10 +169,6 @@ p { text-wrap: pretty; }
   .hero-split { grid-template-columns: 1fr; }
   .hero-visual { order: -1; max-width: 480px; margin-inline: auto; padding-right: 0; justify-content: center; }
 }
-.hero-features { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-6); margin-top: var(--space-8); }
-.hero-feature { display: inline-flex; align-items: center; gap: var(--space-2); font-family: var(--font-display); font-weight: 700; font-size: var(--text-xs); letter-spacing: .04em; text-transform: uppercase; color: rgba(255,255,255,.85); }
-.hero-feature-icon { display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; min-width: 1.5rem; min-height: 1.5rem; max-width: 1.5rem; max-height: 1.5rem; color: var(--color-primary); flex-shrink: 0; overflow: hidden; }
-.hero-feature-icon svg { width: 100% !important; height: 100% !important; max-width: 100%; max-height: 100%; display: block; }
 .hero-divider { display: block; width: 56px; height: 3px; background: var(--color-primary); border-radius: var(--radius-full); margin-bottom: var(--space-6); }
 .eyebrow { font-size: var(--text-xs); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
 .eyebrow.center { text-align: center; }
@@ -586,6 +582,19 @@ p { text-wrap: pretty; }
 .cert-reward figcaption { margin-top: var(--space-2); font-size: var(--text-xs); letter-spacing: .04em; text-transform: uppercase; color: rgba(255,255,255,.7); text-align: center; }
 @media (max-width: 760px) { .cert-level-final { grid-template-columns: 1fr; gap: var(--space-5); text-align: center; } .cert-level-final .cert-final-copy p { margin-inline: auto; max-width: 46ch; } }
 @media (max-width: 560px) { .cert-levels { grid-template-columns: 1fr; } .cert-level-final { padding: var(--space-5) var(--space-4); } .cert-rewards { gap: var(--space-3); } }
+
+/* ============== FEATURES STRIP (Everything in one platform) ============== */
+.features-strip { background: var(--color-navy); color: #fff; padding-block: clamp(var(--space-16), 9vw, var(--space-32)); }
+.features-strip .eyebrow { color: var(--color-primary); margin-bottom: var(--space-10); }
+.features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); max-width: 900px; margin-inline: auto; }
+.feature-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: var(--space-5) var(--space-4); transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+.feature-card:hover, .feature-card:focus-visible { transform: translateY(-3px); border-color: var(--color-primary); background: rgba(255,255,255,.1); }
+.feature-icon { display: block; font-size: 2rem; line-height: 1; margin-bottom: var(--space-4); }
+.feature-card h3 { color: #fff; font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); margin: 0 0 var(--space-2); }
+.feature-card p { color: rgba(255,255,255,.75); font-size: var(--text-sm); line-height: 1.55; margin: 0; }
+.features-strip-subline { text-align: center; color: rgba(255,255,255,.75); font-size: var(--text-base); margin-top: var(--space-10); }
+.features-strip-cta { display: flex; justify-content: center; margin-top: var(--space-6); }
+@media (max-width: 760px) { .features-grid { grid-template-columns: 1fr; } .features-strip-cta .btn { width: 100%; } }
 
 /* ============== ABOUT ============== */
 .about-inner { display: grid; grid-template-columns: 280px 1fr; gap: var(--space-12); align-items: start; }
