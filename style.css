@@ -141,6 +141,8 @@ p { text-wrap: pretty; }
 .site-header--scrolled .header-inner { padding-block: var(--space-2); }
 .logo { display: flex; align-items: center; gap: var(--space-2); font-family: var(--font-display); font-weight: 600; font-size: var(--text-base); color: var(--color-navy); margin-right: auto; }
 .logo-dot { color: var(--color-primary); }
+.logo-img { height: 40px; width: auto; display: block; border-radius: 8px; }
+@media (max-width: 640px) { .logo-img { height: 32px; } }
 .main-nav { display: flex; gap: var(--space-8); }
 .main-nav a { font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted); transition: color var(--transition); }
 .main-nav a:hover { color: var(--color-navy); }
