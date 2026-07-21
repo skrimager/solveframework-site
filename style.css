@@ -143,6 +143,12 @@ p { text-wrap: pretty; }
 .logo-dot { color: var(--color-primary); }
 .logo-img { height: 40px; width: auto; display: block; border-radius: 8px; }
 @media (max-width: 640px) { .logo-img { height: 32px; } }
+.logo--brand { background: #050C1C; border-radius: 10px; padding: 8px 16px; }
+.logo-wordmark { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .logo-wordmark { height: 40px; } .logo--brand { padding: 6px 12px; } }
+.footer-logo { display: inline-block; margin-bottom: var(--space-2); }
+.footer-wordmark { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .footer-wordmark { height: 44px; } }
 .main-nav { display: flex; gap: var(--space-8); }
 .main-nav a { font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted); transition: color var(--transition); }
 .main-nav a:hover { color: var(--color-navy); }
