@@ -201,6 +201,7 @@ p { text-wrap: pretty; }
 .hero-device--flush img { max-height: 720px; width: auto; max-width: 100%; margin-inline: auto; object-fit: contain; }
 
 .hero-company { width: 100%; align-self: stretch; margin-bottom: var(--space-6); }
+.hero-company-headword { font-size: var(--text-lg); margin: 0 0 var(--space-3); }
 .hero-company-defs { list-style: decimal; list-style-position: inside; margin: 0 0 var(--space-4); padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
 .hero-company-defs li { font-size: var(--text-sm); line-height: 1.5; color: rgba(255,255,255,.9); padding-left: var(--space-1); }
 .hero-company-defs li::marker { color: var(--color-primary); font-weight: 700; }
