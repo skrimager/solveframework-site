@@ -762,3 +762,10 @@ p { text-wrap: pretty; }
 .lead-status { margin: 0; font-size: var(--text-sm); min-height: 1.2em; }
 .lead-status-ok { color: #1d7a3e; }
 .lead-status-error { color: #c0392b; }
+
+/* Homepage trim (Step 3): "Learn more" links and collapsed pricing block */
+.link-learn-more { display: inline-flex; align-items: center; gap: .4em; font-weight: 600; color: var(--color-primary); text-decoration: none; }
+.link-learn-more:hover { color: var(--color-primary-hover); text-decoration: underline; }
+.dashboard-oneliner { max-width: 640px; margin-left: auto; margin-right: auto; }
+.dashboard-oneliner .link-learn-more { display: inline; white-space: nowrap; }
+.pricing-cta-row { display: flex; justify-content: center; margin-top: var(--space-6); }
