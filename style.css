@@ -230,6 +230,7 @@ p { text-wrap: pretty; }
 .hero-badge { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-5); }
 .hero-badge span { display: inline-flex; align-items: center; font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); letter-spacing: -.01em; color: var(--color-primary); }
 .hero-badge span.hero-badge-white { color: #fff; }
+.hero-badge span.hero-badge-group { white-space: nowrap; gap: 0.3em; }
 @media (max-width: 480px) { .hero-badge span { font-size: var(--text-sm); } }
 .hero-title { font-size: clamp(1.85rem, 0.85rem + 3.2vw, 3rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.1; margin-bottom: var(--space-4); }
 .hero-title em { font-style: normal; color: var(--color-primary); }
