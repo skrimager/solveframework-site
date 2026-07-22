@@ -700,6 +700,12 @@ p { text-wrap: pretty; }
 .why-buy-grid .hook-card { text-align: left; }
 @media (max-width: 900px) { .why-different-grid { grid-template-columns: repeat(2, 1fr); } }
 
+/* Methodology scoring rubric: 5 cards, 3-2 layout on desktop */
+.rubric-grid { grid-template-columns: repeat(3, 1fr); }
+.rubric-grid .hook-card:nth-child(4) { grid-column: 1 / span 1; }
+@media (max-width: 900px) { .rubric-grid { grid-template-columns: repeat(2, 1fr); } .rubric-grid .hook-card:nth-child(4) { grid-column: auto; } }
+@media (max-width: 640px) { .rubric-grid { grid-template-columns: 1fr; } }
+
 /* Objection handling research strip (bordered surface, existing tokens, no lime) */
 .research-strip { max-width: 68ch; margin: var(--space-10) auto 0; padding: var(--space-6); background: var(--color-surface-2); border: 1px solid var(--color-border-strong); border-radius: var(--radius-lg); text-align: left; }
 .research-strip-title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); color: var(--color-navy); margin-bottom: var(--space-4); text-align: center; }
