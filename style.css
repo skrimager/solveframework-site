@@ -460,6 +460,41 @@ p { text-wrap: pretty; }
   .dashboard-price-grid { grid-template-columns: 1fr; }
 }
 
+/* ---- Combined seat + dashboard pricing card (all-in-one, no math required) ---- */
+.combo-price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-bottom: var(--space-6); text-align: left; }
+.combo-price-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.combo-price-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8) var(--space-6); display: flex; flex-direction: column; }
+.combo-price-card-featured { border-color: var(--color-primary); box-shadow: var(--shadow-md); }
+.combo-badge { display: inline-block; align-self: flex-start; background: var(--color-primary); color: #fff; font-size: var(--text-xs); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); margin-bottom: var(--space-3); }
+.combo-tier { font-size: var(--text-base); font-weight: 700; color: var(--color-navy); margin-bottom: var(--space-1); }
+.combo-tier-range { font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-5); }
+.combo-seat-row { padding-bottom: var(--space-5); margin-bottom: var(--space-5); border-bottom: 1px solid var(--color-border); }
+.combo-row-label { font-size: var(--text-xs); font-weight: 600; color: var(--color-text-faint); text-transform: uppercase; letter-spacing: .04em; margin-bottom: var(--space-2); }
+.combo-seat-amt { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); color: var(--color-navy); line-height: 1; }
+.combo-seat-amt span { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 400; color: var(--color-text-muted); }
+.combo-seat-note { font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-2); line-height: 1.5; }
+.combo-dash-row { flex: 1; }
+.combo-dash-label-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-4); }
+.combo-dash-standard { display: inline-flex; align-items: baseline; gap: var(--space-2); }
+.combo-dash-standard-amt { font-family: var(--font-display); font-weight: 700; font-size: var(--text-sm); color: var(--color-text-faint); text-decoration: line-through; }
+.combo-dash-standard-amt span { font-family: var(--font-body); font-size: var(--text-xs); font-weight: 400; text-decoration: none; }
+.combo-off-badge { background: var(--color-primary); color: #fff; font-size: var(--text-xs); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); white-space: nowrap; line-height: 1.2; }
+.combo-dash-lock-label { font-size: var(--text-xs); font-weight: 600; color: var(--color-primary); text-transform: uppercase; letter-spacing: .03em; margin-bottom: var(--space-2); }
+.combo-dash-lock-amt { font-family: var(--font-display); font-weight: 700; font-size: var(--text-2xl); color: var(--color-navy); line-height: 1; margin-bottom: var(--space-3); }
+.combo-dash-lock-amt span { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 400; color: var(--color-text-muted); }
+.combo-dash-annual { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); font-size: var(--text-sm); font-weight: 700; color: var(--color-primary-active); background: var(--color-primary-highlight); border-radius: var(--radius-md); padding: var(--space-2) var(--space-3); }
+.combo-dash-annual-badge { background: var(--color-navy-deep); color: #fff; font-size: var(--text-xs); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); white-space: nowrap; line-height: 1.2; }
+.combo-dash-annual-text { flex: 1; }
+.combo-dash-optional-note { font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-4); line-height: 1.5; }
+.combo-lime-callout { display: block; text-align: center; background: #C6F135; color: var(--color-navy-deep); font-weight: 700; font-size: var(--text-xs); letter-spacing: .02em; text-transform: uppercase; border-radius: var(--radius-md); padding: var(--space-2) var(--space-3); margin-top: var(--space-4); }
+.combo-price-custom { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); color: var(--color-navy); margin-bottom: var(--space-2); }
+@media (max-width: 1000px) {
+  .combo-price-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 800px) {
+  .combo-price-grid { grid-template-columns: 1fr; }
+}
+
 /* ---- Our Investment in You (certification credit ladder) ---- */
 .investment-block { margin: var(--space-16) auto 0; max-width: var(--content-wide); text-align: center; }
 .investment-title { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-navy); margin-bottom: var(--space-3); }
