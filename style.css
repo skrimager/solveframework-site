@@ -686,7 +686,7 @@ p { text-wrap: pretty; }
 .features-strip { background: var(--color-navy); color: #fff; padding-block: clamp(var(--space-16), 9vw, var(--space-32)); }
 .features-strip .eyebrow { color: var(--color-primary); margin-bottom: var(--space-10); }
 .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); max-width: 900px; margin-inline: auto; }
-.feature-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: var(--space-5) var(--space-4); transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+.feature-card { display: block; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: var(--space-5) var(--space-4); text-decoration: none; color: inherit; transition: transform .18s ease, border-color .18s ease, background .18s ease; }
 .feature-card:hover, .feature-card:focus-visible { transform: translateY(-3px); border-color: var(--color-primary); background: rgba(255,255,255,.1); }
 .feature-icon { display: block; font-size: 2rem; line-height: 1; margin-bottom: var(--space-4); }
 .feature-card h3 { color: #fff; font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); margin: 0 0 var(--space-2); }
