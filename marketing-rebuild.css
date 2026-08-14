@@ -17,7 +17,7 @@
 .marketing-light { background: var(--color-bg); color: var(--color-navy); }
 .marketing-section { padding-block: clamp(var(--space-12), 9vw, var(--space-32)); }
 .marketing-hero { padding-block: clamp(var(--space-16), 13vw, 10rem); }
-.marketing-display, .marketing-heading, .footer-statement { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: -.045em; }
+.marketing-display, .marketing-heading, .footer-statement { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; }
 .marketing-display { max-width: 900px; color: #fff; font-size: clamp(3.4rem, 9vw, 8.5rem); line-height: .86; }
 .marketing-heading { font-size: clamp(2.25rem, 5.5vw, 5.25rem); line-height: .91; max-width: 1100px; }
 .marketing-orange { color: var(--color-primary); }
