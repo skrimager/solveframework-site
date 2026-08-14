@@ -86,4 +86,7 @@
 /* Existing active-orange token provides AA contrast with white button text and light surfaces. */
 .marketing-button { background: var(--color-primary-active); border-color: var(--color-primary-active); }
 .marketing-button:hover, .marketing-button:focus-visible { background: var(--color-primary-hover); border-color: var(--color-primary-hover); }
+/* Secondary button keeps white background with orange text; must win over the general .marketing-button override above. */
+.marketing-button--secondary { background: #fff; color: var(--color-primary-active); border-color: var(--color-primary-active); }
+.marketing-button--secondary:hover, .marketing-button--secondary:focus-visible { background: var(--color-primary-highlight); color: var(--color-primary-active); border-color: var(--color-primary-active); }
 .marketing-light .marketing-orange, .marketing-light .marketing-eyebrow.marketing-orange, .marketing-light .marketing-accent-copy { color: var(--color-primary-active); }
