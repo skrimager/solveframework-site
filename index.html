@@ -44,8 +44,16 @@
       <a href="pricing.html">Pricing</a>
       <a href="books.html">Books</a>
       <a href="faq.html">Resources</a>
-      <a class="marketing-nav-utility" href="https://training.solveframework.com/#/practice">Practice</a>
-      <a class="marketing-nav-utility" href="https://training.solveframework.com/#/">Login</a>
+      <div class="marketing-nav-login">
+        <button class="marketing-nav-login-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="marketing-login-menu" data-testid="button-nav-login-dropdown">
+          Login
+          <svg class="marketing-nav-login-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
+        </button>
+        <ul class="marketing-nav-login-menu" id="marketing-login-menu" hidden>
+          <li><a href="https://training.solveframework.com/#/practice" data-testid="link-nav-login-practice">Practice</a></li>
+          <li><a href="https://training.solveframework.com/#/command-center" data-testid="link-nav-login-command-center">Command Center</a></li>
+        </ul>
+      </div>
       <a class="marketing-button marketing-button--small marketing-nav-cta" href="https://training.solveframework.com/#/signup">TEST MY TEAM</a>
     </nav>
     <button class="marketing-nav-toggle" type="button" aria-expanded="false" aria-controls="marketing-primary-nav" aria-label="Open navigation menu">
@@ -60,7 +68,7 @@
       <h1 id="hero-title" class="marketing-display">PRACTICE.<br><span class="marketing-orange">PERFORMANCE.</span><br>PERIOD.</h1>
       <span class="marketing-rule" aria-hidden="true"></span>
       <p class="marketing-hero-question">BEFORE WE SHOW YOU ANYTHING,<br><span class="marketing-orange">LET US ASK A FEW QUESTIONS.</span></p>
-      <a class="marketing-button" href="#command-center">SHOW ME WHAT I AM NOT SEEING</a>
+      <a class="marketing-button" href="https://training.solveframework.com/#/dashboard-demo">SHOW ME WHAT I AM NOT SEEING</a>
       <p class="marketing-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>No long term commitment to see results.</p>
     </div>
   </section>
@@ -208,23 +216,49 @@
     var header = document.getElementById('site-header');
     var toggle = header && header.querySelector('.marketing-nav-toggle');
     var nav = document.getElementById('marketing-primary-nav');
+    var login = nav && nav.querySelector('.marketing-nav-login');
+    var loginToggle = login && login.querySelector('.marketing-nav-login-toggle');
+    var loginMenu = login && login.querySelector('.marketing-nav-login-menu');
     if (!header || !toggle || !nav) return;
+
+    function setLoginMenu(open, returnFocus) {
+      if (!loginToggle || !loginMenu) return;
+      loginToggle.setAttribute('aria-expanded', String(open));
+      loginMenu.hidden = !open;
+      if (!open && returnFocus) loginToggle.focus();
+    }
 
     function setMenu(open) {
       header.dataset.menuOpen = String(open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      if (!open) setLoginMenu(false, false);
     }
 
     toggle.addEventListener('click', function () {
       setMenu(toggle.getAttribute('aria-expanded') !== 'true');
     });
 
+    if (loginToggle) {
+      loginToggle.addEventListener('click', function () {
+        setLoginMenu(loginToggle.getAttribute('aria-expanded') !== 'true', false);
+      });
+    }
+
     nav.addEventListener('click', function (event) {
       if (event.target.closest('a')) setMenu(false);
     });
 
+    document.addEventListener('click', function (event) {
+      if (login && !login.contains(event.target)) setLoginMenu(false, false);
+    });
+
     document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && loginToggle && loginToggle.getAttribute('aria-expanded') === 'true') {
+        event.preventDefault();
+        setLoginMenu(false, true);
+        return;
+      }
       if (event.key === 'Escape') setMenu(false);
     });
   })();
