@@ -90,3 +90,48 @@
 .marketing-button--secondary { background: #fff; color: var(--color-primary-active); border-color: var(--color-primary-active); }
 .marketing-button--secondary:hover, .marketing-button--secondary:focus-visible { background: var(--color-primary-highlight); color: var(--color-primary-active); border-color: var(--color-primary-active); }
 .marketing-light .marketing-orange, .marketing-light .marketing-eyebrow.marketing-orange, .marketing-light .marketing-accent-copy { color: var(--color-primary-active); }
+
+
+/* Restored homepage navigation and footer link architecture. */
+.marketing-nav { display: flex; align-items: center; justify-content: flex-end; gap: var(--space-3); margin-left: auto; }
+.marketing-nav > a:not(.marketing-button) { color: rgba(255,255,255,.82); font-size: var(--text-xs); font-weight: 700; letter-spacing: .025em; line-height: 1.2; white-space: nowrap; }
+.marketing-nav > a:not(.marketing-button):hover, .marketing-nav > a:not(.marketing-button):focus-visible { color: var(--color-primary); }
+.marketing-nav-utility { color: #fff !important; }
+.marketing-nav-cta { flex: none; margin-left: var(--space-1); text-transform: uppercase; }
+.marketing-nav-toggle { display: none; flex: none; width: 46px; height: 46px; padding: var(--space-3); border: 1px solid rgba(255,255,255,.36); color: #fff; }
+.marketing-nav-toggle span { display: block; height: 2px; background: currentColor; transition: transform var(--transition), opacity var(--transition); }
+.marketing-nav-toggle span + span { margin-top: 5px; }
+
+.marketing-footer-grid { display: grid; gap: clamp(var(--space-12), 7vw, var(--space-24)); }
+.marketing-footer-brand .footer-statement { margin-bottom: var(--space-10); }
+.marketing-footer-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8) var(--space-6); }
+.marketing-footer-column { display: grid; align-content: start; gap: var(--space-3); }
+.marketing-footer-column h2 { color: var(--color-primary); font-family: var(--font-display); font-size: var(--text-xs); font-weight: 800; letter-spacing: .12em; line-height: 1.2; text-transform: uppercase; }
+.marketing-footer-column a { color: rgba(255,255,255,.78); font-size: var(--text-sm); line-height: 1.35; }
+.marketing-footer-column a:hover, .marketing-footer-column a:focus-visible { color: #fff; text-decoration: underline; text-decoration-color: var(--color-primary); text-underline-offset: 4px; }
+
+@media (min-width: 1080px) {
+  .marketing-header-inner { gap: var(--space-5); }
+  .marketing-nav { gap: var(--space-3); }
+}
+
+@media (min-width: 900px) {
+  .marketing-footer-grid { grid-template-columns: minmax(250px, .85fr) minmax(0, 1.5fr); align-items: start; }
+  .marketing-footer-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1079px) {
+  .marketing-nav-toggle { display: block; }
+  .marketing-nav { position: absolute; top: 100%; left: 0; right: 0; display: grid; gap: 0; max-height: 0; margin: 0; overflow: hidden; background: var(--color-navy-deep); border-bottom: 0 solid rgba(255,255,255,.14); opacity: 0; transform: translateY(-8px); transition: max-height var(--transition), opacity var(--transition), transform var(--transition), border-color var(--transition); }
+  .marketing-nav > a:not(.marketing-button) { padding: var(--space-4) var(--space-6); border-top: 1px solid rgba(255,255,255,.1); font-size: var(--text-sm); }
+  .marketing-nav-cta { width: calc(100% - (var(--space-6) * 2)); margin: var(--space-5) var(--space-6) var(--space-6); }
+  .marketing-header[data-menu-open="true"] .marketing-nav { max-height: 620px; border-bottom-width: 1px; opacity: 1; transform: translateY(0); }
+  .marketing-header[data-menu-open="true"] .marketing-nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .marketing-header[data-menu-open="true"] .marketing-nav-toggle span:nth-child(2) { opacity: 0; }
+  .marketing-header[data-menu-open="true"] .marketing-nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (max-width: 420px) {
+  .marketing-nav-toggle { width: 42px; height: 42px; padding: var(--space-2); }
+  .marketing-footer-links { grid-template-columns: 1fr; gap: var(--space-8); }
+}
