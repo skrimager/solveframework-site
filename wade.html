@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Wade Skrimager | SOLVE Framework</title>
+<meta name="description" content="Practice. Performance. Period. Connect with Wade Skrimager, Onboarding Agent at SOLVE Framework." />
+
+<meta property="og:title" content="Wade Skrimager | SOLVE Framework" />
+<meta property="og:description" content="Practice. Performance. Period." />
+<meta property="og:url" content="https://solveframework.com/wade" />
+<meta property="og:type" content="profile" />
+<meta property="og:image" content="https://solveframework.com/assets/wade-card-preview.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Wade Skrimager | SOLVE Framework" />
+<meta name="twitter:description" content="Practice. Performance. Period." />
+<meta name="twitter:image" content="https://solveframework.com/assets/wade-card-preview.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/wade.webmanifest">
+<meta name="theme-color" content="#05162D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Wade | SOLVE">
+<meta name="mobile-web-app-capable" content="yes">
+
+<style>
+  :root{
+    --navy-deep:#05162D;
+    --navy:#0A1A30;
+    --navy-light:#182436;
+    --orange:#FF7A1A;
+    --orange-hover:#E8690D;
+    --white:#FFFFFF;
+    --text-muted:#B7C0CC;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--navy-deep);
+    color:var(--white);
+    font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  .page{
+    min-height:100vh;
+    min-height:100dvh;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:24px 16px 48px;
+  }
+
+  .card{
+    position:relative;
+    width:100%;
+    max-width:440px;
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 55%, var(--navy-deep) 100%);
+    border-radius:32px;
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,0.45), 0 0 0 1px rgba(224,109,0,0.15);
+  }
+
+  /* Header / hero zone */
+  .card-hero{
+    position:relative;
+    padding:36px 28px 0;
+    text-align:center;
+    overflow:hidden;
+  }
+
+  .hero-bg-image{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    object-position:center top;
+    opacity:0.85;
+    -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0) 100%);
+    mask-image:linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0) 100%);
+  }
+
+  .hero-dots{
+    position:absolute;
+    top:0;
+    right:-4%;
+    width:38%;
+    height:520px;
+    opacity:0.85;
+    pointer-events:none;
+    z-index:1;
+  }
+
+  .hero-arc{
+    position:absolute;
+    left:-15%;
+    right:-15%;
+    top:290px;
+    height:150px;
+    border-top:3px solid var(--orange);
+    border-radius:50%;
+    opacity:1;
+    z-index:2;
+  }
+
+  .card-logo{
+    position:relative;
+    z-index:2;
+    width:min(78%, 300px);
+    height:auto;
+    margin:0 auto 6px;
+    display:block;
+  }
+
+  .headshot-wrap{
+    position:relative;
+    z-index:2;
+    width:190px;
+    height:190px;
+    margin:26px auto 0;
+    border-radius:50%;
+    border:5px solid var(--orange);
+    box-shadow:0 8px 30px rgba(224,109,0,0.35);
+    overflow:hidden;
+    background:#FFFFFF;
+  }
+
+  .headshot-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* Name block */
+  .identity{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:20px 28px 0;
+  }
+
+  .identity .first-name{
+    display:block;
+    font-size:34px;
+    font-weight:800;
+    color:var(--orange);
+    letter-spacing:0.5px;
+    line-height:1.05;
+    text-transform:uppercase;
+  }
+
+  .identity .last-name{
+    display:block;
+    font-size:40px;
+    font-weight:800;
+    color:var(--white);
+    letter-spacing:0.5px;
+    line-height:1.1;
+    text-transform:uppercase;
+    margin-top:2px;
+  }
+
+  .identity .divider{
+    width:56px;
+    height:3px;
+    background:var(--orange);
+    border-radius:2px;
+    margin:14px auto 14px;
+  }
+
+  .identity .title{
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--text-muted);
+  }
+
+  /* Contact rows */
+  .contact-list{
+    position:relative;
+    z-index:2;
+    margin:26px 28px 0;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .contact-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    text-decoration:none;
+    color:var(--white);
+  }
+
+  .contact-row:last-child{
+    border-bottom:none;
+  }
+
+  .contact-icon{
+    flex:0 0 auto;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    border:2px solid var(--orange);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--orange);
+  }
+
+  .contact-icon svg{
+    width:16px;
+    height:16px;
+  }
+
+  .contact-text{
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:0.2px;
+    word-break:break-word;
+  }
+
+  /* QR section */
+  .qr-section{
+    position:relative;
+    z-index:2;
+    margin:30px 28px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+  }
+
+  .qr-box{
+    flex:0 0 auto;
+    width:150px;
+    height:150px;
+    background:var(--white);
+    border-radius:16px;
+    border:3px solid var(--orange);
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .qr-box img{
+    width:100%;
+    height:100%;
+    display:block;
+  }
+
+  .qr-caption{
+    flex:0 0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:74px;
+  }
+
+  .qr-label{
+    font-family:'Segoe Script', 'Brush Script MT', cursive;
+    font-style:italic;
+    font-size:19px;
+    font-weight:400;
+    line-height:1.25;
+    text-align:center;
+    color:var(--orange);
+  }
+
+  .qr-arrow{
+    width:44px;
+    height:34px;
+    margin-top:4px;
+    color:var(--orange);
+  }
+
+  /* Action buttons */
+  .actions{
+    position:relative;
+    z-index:2;
+    margin:30px 24px 0;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .btn{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    width:100%;
+    border-radius:16px;
+    padding:16px 20px;
+    text-decoration:none;
+    cursor:pointer;
+    font-family:inherit;
+    text-align:left;
+    transition:transform 0.15s ease, filter 0.15s ease;
+  }
+
+  .btn:active{
+    transform:scale(0.98);
+  }
+
+  .btn-primary{
+    background:linear-gradient(135deg, var(--orange) 0%, #F39416 100%);
+    border:none;
+    color:var(--white);
+    box-shadow:0 10px 24px rgba(224,109,0,0.35);
+  }
+
+  .btn-outline{
+    background:transparent;
+    border:2px solid var(--orange);
+    color:var(--white);
+  }
+
+  .btn-icon{
+    flex:0 0 auto;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:inherit;
+  }
+
+  .btn-icon svg{
+    width:22px;
+    height:22px;
+  }
+
+  .btn-outline .btn-icon{
+    background:rgba(255,122,26,0.16);
+    color:var(--orange);
+    box-shadow:inset 0 0 0 1.5px rgba(255,122,26,0.4);
+  }
+
+  .btn-primary .btn-icon{
+    background:rgba(255,255,255,0.22);
+  }
+
+  .btn-text{
+    flex:1 1 auto;
+    min-width:0;
+  }
+
+  .btn-title{
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:0.3px;
+    text-transform:uppercase;
+    display:block;
+    white-space:nowrap;
+  }
+
+  @media (max-width:360px){
+    .btn-title{
+      font-size:13px;
+    }
+  }
+
+  .btn-subtitle{
+    font-size:12px;
+    font-weight:500;
+    opacity:0.85;
+    display:block;
+    margin-top:2px;
+  }
+
+  .btn-chevron{
+    flex:0 0 auto;
+    width:18px;
+    height:18px;
+    opacity:0.85;
+  }
+
+  .call-text-wrap{
+    position:relative;
+  }
+
+  .call-text-menu{
+    position:relative;
+    margin-top:8px;
+    background:var(--navy-light);
+    border:2px solid var(--orange);
+    border-radius:14px;
+    overflow:hidden;
+    max-height:0;
+    display:block;
+    z-index:5;
+    box-shadow:0 12px 28px rgba(0,0,0,0.4);
+    transition:max-height 0.25s ease;
+  }
+
+  .call-text-menu.open{
+    max-height:120px;
+  }
+
+  .call-text-menu a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 20px;
+    color:var(--white);
+    text-decoration:none;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:0.3px;
+    text-transform:uppercase;
+  }
+
+  .call-text-menu a svg{
+    width:18px;
+    height:18px;
+    color:var(--orange);
+  }
+
+  .call-text-menu a:not(:last-child){
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+
+  /* Closing line */
+  .closing{
+    position:relative;
+    z-index:2;
+    margin:34px 28px 8px;
+    text-align:center;
+  }
+
+  .closing-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-bottom:16px;
+  }
+
+  .closing-divider .line{
+    height:1px;
+    width:56px;
+    background:rgba(224,109,0,0.5);
+  }
+
+  .closing-divider .bubble{
+    width:26px;
+    height:26px;
+    border-radius:8px;
+    background:var(--orange);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .closing-divider .bubble svg{
+    width:14px;
+    height:14px;
+    fill:var(--navy-deep);
+  }
+
+  .closing p{
+    margin:0;
+    font-size:13px;
+    line-height:1.7;
+    letter-spacing:0.3px;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    font-weight:600;
+  }
+
+  .closing .highlight{
+    color:var(--orange);
+  }
+
+  .card-footer-space{
+    height:32px;
+  }
+
+  .toast{
+    position:fixed;
+    left:50%;
+    bottom:28px;
+    transform:translateX(-50%) translateY(20px);
+    background:var(--orange);
+    color:var(--white);
+    font-weight:700;
+    font-size:14px;
+    padding:12px 22px;
+    border-radius:999px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.25s ease, transform 0.25s ease;
+    z-index:50;
+    white-space:nowrap;
+  }
+
+  .toast.show{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+  }
+
+  @media (min-width:480px){
+    .page{
+      padding:48px 16px 64px;
+    }
+    .card{
+      max-width:400px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <main class="card" aria-label="Wade Skrimager digital business card">
+
+    <div class="card-hero">
+      <img class="hero-bg-image" src="/assets/wade-hero-bg.png" alt="" aria-hidden="true" />
+      <svg class="hero-dots" viewBox="0 0 200 500" aria-hidden="true">
+        <g fill="#E06D00">
+          <circle cx="60.0" cy="10.0" r="2.2"/>
+          <circle cx="70.0" cy="32.0" r="2.2"/>
+          <circle cx="60.7" cy="54.0" r="2.2"/>
+          <circle cx="50.1" cy="76.0" r="2.2"/>
+          <circle cx="58.6" cy="98.0" r="2.2"/>
+          <circle cx="69.8" cy="120.0" r="2.2"/>
+          <circle cx="62.1" cy="142.0" r="2.2"/>
+          <circle cx="50.3" cy="164.0" r="2.2"/>
+          <circle cx="57.2" cy="186.0" r="2.2"/>
+          <circle cx="69.5" cy="208.0" r="2.2"/>
+          <circle cx="63.4" cy="230.0" r="2.2"/>
+          <circle cx="50.7" cy="252.0" r="2.2"/>
+          <circle cx="55.9" cy="274.0" r="2.2"/>
+          <circle cx="69.0" cy="296.0" r="2.2"/>
+          <circle cx="64.7" cy="318.0" r="2.2"/>
+          <circle cx="51.3" cy="340.0" r="2.2"/>
+          <circle cx="54.7" cy="362.0" r="2.2"/>
+          <circle cx="68.3" cy="384.0" r="2.2"/>
+          <circle cx="65.9" cy="406.0" r="2.2"/>
+          <circle cx="52.1" cy="428.0" r="2.2"/>
+          <circle cx="53.6" cy="450.0" r="2.2"/>
+          <circle cx="67.4" cy="472.0" r="2.2"/>
+          <circle cx="66.9" cy="494.0" r="2.2"/>
+          <circle cx="92.9" cy="10.0" r="2.0"/>
+          <circle cx="97.8" cy="32.0" r="2.0"/>
+          <circle cx="81.9" cy="54.0" r="2.0"/>
+          <circle cx="71.0" cy="76.0" r="2.0"/>
+          <circle cx="82.9" cy="98.0" r="2.0"/>
+          <circle cx="98.2" cy="120.0" r="2.0"/>
+          <circle cx="92.1" cy="142.0" r="2.0"/>
+          <circle cx="74.5" cy="164.0" r="2.0"/>
+          <circle cx="74.0" cy="186.0" r="2.0"/>
+          <circle cx="91.4" cy="208.0" r="2.0"/>
+          <circle cx="98.4" cy="230.0" r="2.0"/>
+          <circle cx="83.6" cy="252.0" r="2.0"/>
+          <circle cx="71.1" cy="274.0" r="2.0"/>
+          <circle cx="81.1" cy="296.0" r="2.0"/>
+          <circle cx="97.5" cy="318.0" r="2.0"/>
+          <circle cx="93.5" cy="340.0" r="2.0"/>
+          <circle cx="75.7" cy="362.0" r="2.0"/>
+          <circle cx="73.0" cy="384.0" r="2.0"/>
+          <circle cx="89.8" cy="406.0" r="2.0"/>
+          <circle cx="98.8" cy="428.0" r="2.0"/>
+          <circle cx="85.4" cy="450.0" r="2.0"/>
+          <circle cx="71.3" cy="472.0" r="2.0"/>
+          <circle cx="79.5" cy="494.0" r="2.0"/>
+          <circle cx="124.3" cy="10.0" r="1.8"/>
+          <circle cx="121.3" cy="32.0" r="1.8"/>
+          <circle cx="102.7" cy="54.0" r="1.8"/>
+          <circle cx="94.2" cy="76.0" r="1.8"/>
+          <circle cx="107.5" cy="98.0" r="1.8"/>
+          <circle cx="124.3" cy="120.0" r="1.8"/>
+          <circle cx="121.3" cy="142.0" r="1.8"/>
+          <circle cx="102.7" cy="164.0" r="1.8"/>
+          <circle cx="94.2" cy="186.0" r="1.8"/>
+          <circle cx="107.5" cy="208.0" r="1.8"/>
+          <circle cx="124.3" cy="230.0" r="1.8"/>
+          <circle cx="121.3" cy="252.0" r="1.8"/>
+          <circle cx="102.7" cy="274.0" r="1.8"/>
+          <circle cx="94.2" cy="296.0" r="1.8"/>
+          <circle cx="107.5" cy="318.0" r="1.8"/>
+          <circle cx="124.3" cy="340.0" r="1.8"/>
+          <circle cx="121.3" cy="362.0" r="1.8"/>
+          <circle cx="102.7" cy="384.0" r="1.8"/>
+          <circle cx="94.2" cy="406.0" r="1.8"/>
+          <circle cx="107.5" cy="428.0" r="1.8"/>
+          <circle cx="124.3" cy="450.0" r="1.8"/>
+          <circle cx="121.3" cy="472.0" r="1.8"/>
+          <circle cx="102.7" cy="494.0" r="1.8"/>
+          <circle cx="153.0" cy="10.0" r="1.6"/>
+          <circle cx="141.8" cy="32.0" r="1.6"/>
+          <circle cx="122.6" cy="54.0" r="1.6"/>
+          <circle cx="118.1" cy="76.0" r="1.6"/>
+          <circle cx="133.6" cy="98.0" r="1.6"/>
+          <circle cx="150.8" cy="120.0" r="1.6"/>
+          <circle cx="149.2" cy="142.0" r="1.6"/>
+          <circle cx="130.7" cy="164.0" r="1.6"/>
+          <circle cx="117.3" cy="186.0" r="1.6"/>
+          <circle cx="124.8" cy="208.0" r="1.6"/>
+          <circle cx="144.5" cy="230.0" r="1.6"/>
+          <circle cx="152.8" cy="252.0" r="1.6"/>
+          <circle cx="140.1" cy="274.0" r="1.6"/>
+          <circle cx="121.3" cy="296.0" r="1.6"/>
+          <circle cx="118.8" cy="318.0" r="1.6"/>
+          <circle cx="135.5" cy="340.0" r="1.6"/>
+          <circle cx="151.7" cy="362.0" r="1.6"/>
+          <circle cx="148.0" cy="384.0" r="1.6"/>
+          <circle cx="128.9" cy="406.0" r="1.6"/>
+          <circle cx="117.1" cy="428.0" r="1.6"/>
+          <circle cx="126.5" cy="450.0" r="1.6"/>
+          <circle cx="146.0" cy="472.0" r="1.6"/>
+          <circle cx="152.5" cy="494.0" r="1.6"/>
+          <circle cx="177.3" cy="10.0" r="1.4"/>
+          <circle cx="159.6" cy="32.0" r="1.4"/>
+          <circle cx="142.3" cy="54.0" r="1.4"/>
+          <circle cx="143.2" cy="76.0" r="1.4"/>
+          <circle cx="161.4" cy="98.0" r="1.4"/>
+          <circle cx="178.1" cy="120.0" r="1.4"/>
+          <circle cx="176.2" cy="142.0" r="1.4"/>
+          <circle cx="157.6" cy="164.0" r="1.4"/>
+          <circle cx="141.5" cy="186.0" r="1.4"/>
+          <circle cx="144.4" cy="208.0" r="1.4"/>
+          <circle cx="163.3" cy="230.0" r="1.4"/>
+          <circle cx="178.8" cy="252.0" r="1.4"/>
+          <circle cx="175.0" cy="274.0" r="1.4"/>
+          <circle cx="155.7" cy="296.0" r="1.4"/>
+          <circle cx="140.8" cy="318.0" r="1.4"/>
+          <circle cx="145.7" cy="340.0" r="1.4"/>
+          <circle cx="165.2" cy="362.0" r="1.4"/>
+          <circle cx="179.4" cy="384.0" r="1.4"/>
+          <circle cx="173.7" cy="406.0" r="1.4"/>
+          <circle cx="153.9" cy="428.0" r="1.4"/>
+          <circle cx="140.4" cy="450.0" r="1.4"/>
+          <circle cx="147.1" cy="472.0" r="1.4"/>
+          <circle cx="167.0" cy="494.0" r="1.4"/>
+          <circle cx="188.2" cy="10.0" r="1.2"/>
+          <circle cx="173.1" cy="32.0" r="1.2"/>
+          <circle cx="164.2" cy="54.0" r="1.2"/>
+          <circle cx="169.4" cy="76.0" r="1.2"/>
+          <circle cx="184.2" cy="98.0" r="1.2"/>
+          <circle cx="195.2" cy="120.0" r="1.2"/>
+          <circle cx="192.5" cy="142.0" r="1.2"/>
+          <circle cx="178.6" cy="164.0" r="1.2"/>
+          <circle cx="165.9" cy="186.0" r="1.2"/>
+          <circle cx="165.9" cy="208.0" r="1.2"/>
+          <circle cx="178.5" cy="230.0" r="1.2"/>
+          <circle cx="192.5" cy="252.0" r="1.2"/>
+          <circle cx="195.2" cy="274.0" r="1.2"/>
+          <circle cx="184.3" cy="296.0" r="1.2"/>
+          <circle cx="169.5" cy="318.0" r="1.2"/>
+          <circle cx="164.1" cy="340.0" r="1.2"/>
+          <circle cx="173.0" cy="362.0" r="1.2"/>
+          <circle cx="188.2" cy="384.0" r="1.2"/>
+          <circle cx="196.0" cy="406.0" r="1.2"/>
+          <circle cx="189.4" cy="428.0" r="1.2"/>
+          <circle cx="174.4" cy="450.0" r="1.2"/>
+          <circle cx="164.4" cy="472.0" r="1.2"/>
+          <circle cx="168.4" cy="494.0" r="1.2"/>
+        </g>
+      </svg>
+      <div class="hero-arc" aria-hidden="true"></div>
+
+      <img class="card-logo" src="/solve-wordmark-bigtag-transparent.png" alt="SOLVE Framework - Practice. Performance. Period." />
+
+      <div class="headshot-wrap">
+        <img src="/assets/wade-headshot-bw.png" alt="Wade Skrimager" />
+      </div>
+    </div>
+
+    <div class="identity">
+      <span class="first-name">Wade</span>
+      <span class="last-name">Skrimager</span>
+      <div class="divider" aria-hidden="true"></div>
+      <span class="title">Onboarding Agent</span>
+    </div>
+
+    <div class="contact-list">
+      <a class="contact-row" href="tel:+14059737325" data-testid="link-phone-row">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <span class="contact-text">405.973.7325</span>
+      </a>
+      <a class="contact-row" href="mailto:Hello@solveframework.com" data-testid="link-email-row">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6z"/><path d="M22 6l-10 7L2 6"/></svg>
+        </span>
+        <span class="contact-text">Hello@solveframework.com</span>
+      </a>
+      <a class="contact-row" href="https://solveframework.com" data-testid="link-website-row">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span>
+        <span class="contact-text">solveframework.com</span>
+      </a>
+    </div>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img id="qr-code-img" src="/assets/wade-qr.png" alt="QR code linking to solveframework.com/wade" data-testid="img-qr-code" />
+      </div>
+      <div class="qr-caption">
+        <span class="qr-label">Scan to<br>connect</span>
+        <svg class="qr-arrow" viewBox="0 0 44 34" fill="none" aria-hidden="true">
+          <path d="M40 6C28 8 14 14 6 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M4 15L6 24L15 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="btn-add-contacts" data-testid="button-add-contacts">
+        <span class="btn-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+        </span>
+        <span class="btn-text">
+          <span class="btn-title">Add Me to Contacts</span>
+          <span class="btn-subtitle">Save my info to your phone</span>
+        </span>
+        <svg class="btn-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <button class="btn btn-outline" id="btn-share-card" data-testid="button-share-card">
+        <span class="btn-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51L8.59 10.49"/></svg>
+        </span>
+        <span class="btn-text">
+          <span class="btn-title">Share My Card</span>
+          <span class="btn-subtitle">Send my digital card to anyone</span>
+        </span>
+        <svg class="btn-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <a class="btn btn-outline" href="https://solveframework.com" data-testid="link-visit-solve">
+        <span class="btn-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span>
+        <span class="btn-text">
+          <span class="btn-title">Visit SOLVE Framework</span>
+          <span class="btn-subtitle">Learn more about SOLVE</span>
+        </span>
+        <svg class="btn-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+
+      <div class="call-text-wrap" id="call-text-wrap">
+        <button class="btn btn-outline" id="btn-call-or-text" data-testid="button-call-or-text" aria-haspopup="true" aria-expanded="false">
+          <span class="btn-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span class="btn-text">
+            <span class="btn-title">Call or Text Me</span>
+            <span class="btn-subtitle">Let's start the conversation</span>
+          </span>
+          <svg class="btn-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="call-text-menu" id="call-text-menu">
+          <a href="tel:+14059737325" data-testid="link-call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call
+          </a>
+          <a href="sms:+14059737325" data-testid="link-text">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Text
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="closing">
+      <div class="closing-divider" aria-hidden="true">
+        <span class="line"></span>
+        <span class="bubble">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2z"/></svg>
+        </span>
+        <span class="line"></span>
+      </div>
+      <p>Great conversations create great experiences and<br><span class="highlight">extraordinary</span> companies.</p>
+    </div>
+
+    <div class="card-footer-space"></div>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Card link copied.</div>
+
+<script>
+  (function(){
+    var CARD_URL = "https://solveframework.com/wade";
+    var VCF_URL = "/wade.vcf";
+
+    var callTextBtn = document.getElementById('btn-call-or-text');
+    var callTextMenu = document.getElementById('call-text-menu');
+    if (callTextBtn && callTextMenu){
+      callTextBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var isOpen = callTextMenu.classList.toggle('open');
+        callTextBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      document.addEventListener('click', function(e){
+        if (!callTextMenu.contains(e.target) && e.target !== callTextBtn){
+          callTextMenu.classList.remove('open');
+          callTextBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    function showToast(msg){
+      var t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function(){ t.classList.remove('show'); }, 2400);
+    }
+
+    document.getElementById('btn-add-contacts').addEventListener('click', function(){
+      var link = document.createElement('a');
+      link.href = VCF_URL;
+      link.download = 'wade-skrimager.vcf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    document.getElementById('btn-share-card').addEventListener('click', function(){
+      if (navigator.share) {
+        navigator.share({
+          title: 'Wade Skrimager | SOLVE Framework',
+          text: 'Here is my SOLVE Framework digital card.',
+          url: CARD_URL
+        }).catch(function(){ /* user cancelled, no-op */ });
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(CARD_URL).then(function(){
+          showToast('Card link copied.');
+        }).catch(function(){
+          showToast(CARD_URL);
+        });
+      } else {
+        showToast(CARD_URL);
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
