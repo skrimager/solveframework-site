@@ -83,12 +83,13 @@
   .difference-section .marketing-heading { font-size: clamp(1.55rem, 7vw, 2rem); }
   .improvement-loop { margin: var(--space-10) var(--space-4) 0; }
 }
-/* Existing active-orange token provides AA contrast with white button text and light surfaces. */
-.marketing-button { background: var(--color-primary-active); border-color: var(--color-primary-active); }
-.marketing-button:hover, .marketing-button:focus-visible { background: var(--color-primary-hover); border-color: var(--color-primary-hover); }
+/* True brand orange (matches logo and headline accents) with navy text for AA contrast (5.28:1). */
+.marketing-button { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-navy); }
+.marketing-button:hover, .marketing-button:focus-visible { background: var(--color-primary-hover); border-color: var(--color-primary-hover); color: var(--color-navy); }
+.marketing-button:active { background: var(--color-primary-active); border-color: var(--color-primary-active); color: #fff; }
 /* Secondary button keeps white background with orange text; must win over the general .marketing-button override above. */
-.marketing-button--secondary { background: #fff; color: var(--color-primary-active); border-color: var(--color-primary-active); }
-.marketing-button--secondary:hover, .marketing-button--secondary:focus-visible { background: var(--color-primary-highlight); color: var(--color-primary-active); border-color: var(--color-primary-active); }
+.marketing-button--secondary { background: #fff; color: var(--color-primary); border-color: var(--color-primary); }
+.marketing-button--secondary:hover, .marketing-button--secondary:focus-visible { background: var(--color-primary-highlight); color: var(--color-primary); border-color: var(--color-primary); }
 .marketing-light .marketing-orange, .marketing-light .marketing-eyebrow.marketing-orange, .marketing-light .marketing-accent-copy { color: var(--color-primary-active); }
 
 
