@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SOLVE Framework | Practice. Performance. Period.</title>
-<meta name="description" content="SOLVE turns conversational performance into management intelligence." />
+<meta name="description" content="SOLVE measures the performance behind your numbers, helping you understand what each person does well, where they can improve, and where your attention matters most." />
 <meta property="og:title" content="SOLVE Framework | Practice. Performance. Period." />
-<meta property="og:description" content="SOLVE turns conversational performance into management intelligence." />
+<meta property="og:description" content="SOLVE measures the performance behind your numbers, helping you understand what each person does well, where they can improve, and where your attention matters most." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet" />
@@ -20,248 +20,467 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#05162D">
 <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="marketing-rebuild.css" />
+<link rel="stylesheet" href="homepage-v3.css" />
 </head>
-<body class="marketing-page">
+<body class="v3-page">
 <a class="skip-link" href="#main">Skip to content</a>
 
-<a class="announce-bar" href="pricing.html#manager-dashboard" data-testid="link-announce-pricing">
-  <span class="announce-bar-inner">
-    <span class="announce-bar-text"><strong>Dashboard pricing: 25% off, locked for your first year</strong>, plus an extra 20% off with annual prepay. Price increases September 1.</span>
-    <span class="announce-bar-cta">See pricing &rarr;</span>
-  </span>
+<a class="v3-announce" href="pricing.html#manager-dashboard" data-testid="link-announce-pricing">
+  <strong>Dashboard pricing: 25% off, locked for your first year</strong>, plus an extra 20% off with annual prepay. Price increases September 1.
 </a>
 
-<header class="marketing-header" id="site-header">
-  <div class="marketing-wrap marketing-header-inner">
-    <a href="/" class="marketing-logo" aria-label="SOLVE Framework home">
+<header class="v3-header" id="site-header">
+  <div class="v3-wrap v3-header-inner">
+    <a href="/" class="v3-logo" aria-label="SOLVE Framework home">
       <img src="/solve-wordmark-bigtag-transparent.png" alt="SOLVE Framework - Practice. Performance. Period." />
     </a>
-    <nav class="marketing-nav" id="marketing-primary-nav" aria-label="Primary navigation">
-      <a href="why-solve-works.html">Why SOLVE</a>
-      <a href="#command-center">Command Center</a>
-      <a href="certification.html">Academy / Certification</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="books.html">Books</a>
-      <a href="faq.html">Resources</a>
-      <div class="marketing-nav-login">
-        <button class="marketing-nav-login-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="marketing-login-menu" data-testid="button-nav-login-dropdown">
-          Login
-          <svg class="marketing-nav-login-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
-        </button>
-        <ul class="marketing-nav-login-menu" id="marketing-login-menu" hidden>
-          <li><a href="https://training.solveframework.com/#/practice" data-testid="link-nav-login-practice">Practice</a></li>
-          <li><a href="https://training.solveframework.com/#/command-center" data-testid="link-nav-login-command-center">Command Center</a></li>
-        </ul>
-      </div>
-      <a class="marketing-button marketing-button--small marketing-nav-cta" href="https://training.solveframework.com/#/signup">TEST MY TEAM</a>
-    </nav>
-    <button class="marketing-nav-toggle" type="button" aria-expanded="false" aria-controls="marketing-primary-nav" aria-label="Open navigation menu">
+    <button class="v3-nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
+    <nav class="v3-nav" id="primary-nav" aria-label="Primary navigation">
+      <div class="v3-nav-links">
+        <a href="#command-center" data-testid="link-nav-command-center">Command Center</a>
+        <a href="why-solve-works.html" data-testid="link-nav-how-it-works">How It Works</a>
+        <a href="pricing.html" data-testid="link-nav-pricing">Pricing</a>
+        <div class="v3-nav-item" data-open="false">
+          <button type="button" aria-expanded="false" data-testid="button-nav-resources">Resources
+            <svg class="v3-nav-caret" viewBox="0 0 10 7"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="v3-nav-dropdown">
+            <a href="certification.html" data-testid="link-nav-academy">Academy &amp; Certification</a>
+            <a href="books.html" data-testid="link-nav-books">Books</a>
+            <a href="research.html" data-testid="link-nav-research">Research</a>
+            <a href="methodology.html" data-testid="link-nav-methodology">Methodology</a>
+            <a href="faq.html" data-testid="link-nav-faq">FAQ</a>
+          </div>
+        </div>
+        <a href="about-wade.html" data-testid="link-nav-about">About</a>
+      </div>
+      <div class="v3-nav-actions">
+        <a class="v3-nav-login" href="https://training.solveframework.com/#/login" data-testid="link-nav-login">LOGIN</a>
+        <a class="v3-nav-cta" href="https://training.solveframework.com/#/signup" data-testid="link-nav-test-my-team">TEST MY TEAM</a>
+      </div>
+    </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="marketing-hero marketing-dark" aria-labelledby="hero-title">
-    <div class="marketing-wrap">
-      <h1 id="hero-title" class="marketing-display">PRACTICE.<br><span class="marketing-orange">PERFORMANCE.</span><br>PERIOD.</h1>
-      <span class="marketing-rule" aria-hidden="true"></span>
-      <p class="marketing-hero-question">BEFORE WE SHOW YOU ANYTHING,<br><span class="marketing-orange">LET US ASK A FEW QUESTIONS.</span></p>
-      <a class="marketing-button" href="https://training.solveframework.com/#/dashboard-demo">SHOW ME WHAT I AM NOT SEEING</a>
-      <p class="marketing-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>No long term commitment to see results.</p>
-    </div>
-  </section>
 
-  <section class="marketing-section marketing-dark marketing-questions" aria-labelledby="questions-title">
-    <div class="marketing-wrap marketing-narrow">
-      <h2 id="questions-title" class="sr-only">The five questions</h2>
-      <ol class="question-list">
-        <li class="question-card"><span class="question-number">1</span><p>Is your top earner your best conversationalist, or just your hardest worker?</p><strong>WOULD YOU ACTUALLY KNOW THE DIFFERENCE?</strong></li>
-        <li class="question-card"><span class="question-number">2</span><p>If your best closer left tomorrow, could you tell their replacement exactly what they did well?</p><strong>OR WOULD YOU JUST SAY, "THEY'RE A NATURAL"?</strong></li>
-        <li class="question-card"><span class="question-number">3</span><p>You have someone who is average in volume but exceptional in the room.</p><strong>DO YOU KNOW WHO THAT IS?</strong></li>
-        <li class="question-card"><span class="question-number">4</span><p>Your CRM tells you who closed.</p><strong>DOES ANYTHING TELL YOU WHY?</strong></li>
-        <li class="question-card"><span class="question-number">5</span><p>If you could take what your best person does differently in every conversation and teach it to the rest of your team...</p><strong>WOULD YOU EVEN KNOW WHAT IT IS?</strong></li>
-      </ol>
-      <aside class="question-callout">WHAT IF<br><span class="marketing-orange">YOU COULD?</span></aside>
-    </div>
-  </section>
-
-  <section class="marketing-section marketing-light" aria-labelledby="results-title">
-    <div class="marketing-wrap">
-      <div class="section-intro">
-        <h2 id="results-title" class="marketing-heading">YOU ALREADY<br>MEASURE THE<br>RESULTS.</h2>
-        <p class="marketing-accent-copy">But results do not tell you what created them.</p>
+  <!-- SECTION 1: HERO -->
+  <section class="v3-section v3-hero v3-light" aria-labelledby="hero-title">
+    <div class="v3-wrap">
+      <p class="v3-eyebrow">PRACTICE. PERFORMANCE. PERIOD.</p>
+      <h1 id="hero-title" class="v3-h1">YOU ALREADY KNOW WHO SELLS THE MOST.<br><span class="v3-orange">SOLVE HELPS YOU UNDERSTAND WHY.</span></h1>
+      <p class="v3-lede">Your CRM measures results. SOLVE measures the performance behind them, helping you understand what each person does well, where they can improve, and where your attention matters most.</p>
+      <div class="v3-btn-row">
+        <a class="v3-btn" href="https://training.solveframework.com/#/dashboard-demo" data-testid="link-hero-see-command-center">SEE THE COMMAND CENTER</a>
+        <a class="v3-btn v3-btn--ghost" href="https://training.solveframework.com/#/demo" data-testid="link-hero-try-conversation">TRY ONE CONVERSATION</a>
       </div>
-      <div class="metrics-grid" aria-label="Conventional business metrics">
-        <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9m8 10V5m8 14v-7"/></svg>SALES</div><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 3 8-8"/><path d="M16 6h5v5"/></svg>REVENUE</div><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="m8 12 2.5 2.5L16 9"/></svg>CLOSE RATE</div><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12H7l-3 3V5Z"/></svg>LEADS</div><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h3l2 5-2 2c1.1 2.2 1.8 2.9 4 4l2-2 5 2v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-1.1.9-2 2-2Z"/></svg>CALLS</div><div><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 3v4m10-4v4M3 10h18"/></svg>APPOINTMENTS</div><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4Z"/><path d="M8 8h8m-8 4h5"/></svg>FOLLOW UPS</div>
-      </div>
-      <div class="results-copy">
-        <p>Your CRM can tell you who sold the most.</p><p>Your sales report can tell you who produced the most revenue.</p><p>Your activity report can tell you who made the most calls.</p>
-        <h3>BUT THOSE NUMBERS CANNOT TELL YOU</h3>
-        <ul class="orange-check-list"><li>WHY one person consistently creates better customer experiences.</li><li>WHAT your best people actually do differently.</li><li>WHERE your developing people need help.</li><li>WHO has strengths the rest of your team could learn from.</li></ul>
-        <p class="results-close">That is the gap SOLVE was built to help you see.</p>
-      </div>
+      <p class="v3-otp-note"><svg viewBox="0 0 20 20"><path d="M5 9V7a5 5 0 0110 0v2M4 9h12v9H4z"/></svg>We'll email you a one-time access code. No account or password required.</p>
     </div>
   </section>
 
-  <section class="marketing-section marketing-dark command-intro" aria-labelledby="command-title">
-    <div class="marketing-wrap marketing-narrow">
-      <p class="marketing-eyebrow">MEET THE</p><h2 id="command-title" class="marketing-heading marketing-orange">SOLVE COMMAND<br>CENTER.</h2>
-      <p class="marketing-lede"><span class="marketing-orange">See</span> what your numbers cannot tell you.</p>
-      <p>SOLVE turns conversational performance into management intelligence.</p>
-      <p>Instead of listening to every conversation, reviewing every transcript, or trying to interpret another pile of charts, you get the patterns that deserve your attention.</p>
-      <a class="marketing-button" href="https://training.solveframework.com/#/dashboard-demo">SEE THE COMMAND CENTER</a>
-    </div>
-  </section>
-
-  <section id="command-center" class="marketing-section marketing-dark command-example" aria-labelledby="command-example-title">
-    <div class="marketing-wrap"><h2 id="command-example-title" class="sr-only">Command Center Example</h2>
-      <div class="command-card">
-        <div class="command-metrics">
-          <div><span>TEAM HEALTH SCORE</span><b>80</b><em class="performance-positive">+12%</em></div><div><span>CONVERSATIONS</span><b>51</b><em class="performance-positive">+11%</em></div><div><span>COMPLETION RATE</span><b>100%</b><em class="performance-positive">+8%</em></div><div><span>CERTIFICATIONS EARNED</span><b>6</b><em class="performance-positive">+40%</em></div><div><span>ALERTS</span><b>3</b><em>Needs attention</em></div>
+  <!-- SECTION 2: MAKE THE MANAGER THINK -->
+  <section class="v3-section v3-light" aria-labelledby="think-title">
+    <div class="v3-wrap">
+      <h2 id="think-title" class="v3-h2">BEFORE WE SHOW YOU ANYTHING,<br><span class="v3-orange">ANSWER THESE.</span></h2>
+      <div class="v3-qgrid">
+        <div class="v3-qcard">
+          <span class="v3-qcard-label">THE MUST-CLOSE LEAD</span>
+          <p>Your most important lead of the quarter comes in.</p>
+          <strong>WHO GETS IT?</strong>
         </div>
-        <div class="command-content">
-          <div><h3>WHAT SOLVE IS SEEING</h3><dl class="insight-list"><div><dt>Top conversational performer</dt><dd>Chris</dd></div><div><dt>Strongest at discovery</dt><dd>Chris</dd></div><div><dt>Strongest at commitment</dt><dd>Dale</dd></div><div><dt>Strongest at resistance</dt><dd>Mike</dd></div><div><dt>Hidden team strength</dt><dd>Building trust</dd></div><div><dt>Biggest team opportunity</dt><dd>Price resistance</dd></div><div><dt>Fastest improving</dt><dd>Steve</dd></div><div><dt>Coaching priority</dt><dd>Mike, discovery</dd></div></dl></div>
-          <div><h3>TOP PERFORMERS BY CONVERSATION QUALITY</h3><div class="performance-bars"><div><span>Chris</span><i><b style="width:92%"></b></i><strong>92</strong></div><div><span>Dale</span><i><b style="width:87%"></b></i><strong>87</strong></div><div><span>Mike</span><i><b style="width:84%"></b></i><strong>84</strong></div><div><span>Sarah</span><i><b style="width:78%"></b></i><strong>78</strong></div><div><span>Steve</span><i><b style="width:71%"></b></i><strong>71</strong></div></div></div>
+        <div class="v3-qcard">
+          <span class="v3-qcard-label">THE FAMILY-MEMBER LEAD</span>
+          <p>Someone you care about needs exceptional treatment.</p>
+          <strong>DO YOU GIVE IT TO THE SAME PERSON?</strong>
         </div>
-        <p class="example-disclaimer">ILLUSTRATIVE EXAMPLE DATA — ACME SALES, A FICTIONAL ACCOUNT</p>
+        <div class="v3-qcard">
+          <span class="v3-qcard-label">THE TOUGH CUSTOMER</span>
+          <p>You know this customer may be difficult.</p>
+          <strong>WHO ON YOUR TEAM HANDLES THEM BEST?</strong>
+        </div>
+        <div class="v3-qcard">
+          <span class="v3-qcard-label">THE PRICE SHOPPER</span>
+          <p>"I'm getting three other estimates."</p>
+          <strong>WHO DO YOU WANT TAKING THAT CALL?</strong>
+        </div>
+      </div>
+      <div class="v3-qfollow">
+        <p>If you knew exactly who was strongest at each kind of customer situation, would that change how you coach your team, develop your people, or even distribute opportunities?</p>
+        <p>Your CRM can tell you who closed. SOLVE helps you understand what each person does well, where they need improvement, and why their results may be different.</p>
       </div>
     </div>
   </section>
 
-  <section class="marketing-section marketing-light difference-section" aria-labelledby="difference-title">
-    <div class="marketing-wrap"><h2 id="difference-title" class="marketing-heading">YOUR BEST PRODUCER AND<br>YOUR BEST<br>CONVERSATIONALIST<br><span class="marketing-orange">MAY NOT BE THE SAME<br>PERSON.</span></h2><p class="section-body">Production matters. SOLVE does not replace your business metrics. It adds another layer of information to help you understand the people behind them.</p>
-      <div class="difference-cards"><article class="difference-card"><p class="card-label">WHAT MOST SYSTEMS TELL YOU</p><h3>Dale</h3><div class="production-figures"><div><b>32</b><span>SALES</span></div><div><b>$84,000</b><span>REVENUE</span></div><div><b>21%</b><span>CLOSE RATE</span></div></div><div class="production-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article><article class="difference-card difference-card--intelligence"><p class="card-label">WHAT SOLVE HELPS YOU UNDERSTAND</p><h3>Dale</h3><dl><div><dt>Strongest skill</dt><dd>Asking for commitment</dd></div><div><dt>Opportunity</dt><dd>Discovery</dd></div><div><dt>Resistance handling</dt><dd>91</dd></div><div><dt>Conversation quality</dt><dd>87</dd></div></dl><hr><h3>Chris</h3><dl><div><dt>Sales rank</dt><dd>3</dd></div><div><dt>Conversation quality</dt><dd>92</dd></div><div><dt>Strongest skill</dt><dd>Discovery</dd></div><div><dt>Team rank in discovery</dt><dd>1</dd></div></dl></article></div>
-      <aside class="hidden-strength"><strong>HIDDEN STRENGTH IDENTIFIED</strong><p>Your best producer and your best conversationalist may not be the same person. Now you can see both, and coach with the difference.</p></aside><p class="example-disclaimer example-disclaimer--light">ILLUSTRATIVE EXAMPLE DATA — ACME SALES, A FICTIONAL ACCOUNT</p>
+  <!-- SECTION 3: REVEAL THE PRODUCT -->
+  <section class="v3-section v3-dark" id="command-center" aria-labelledby="reveal-title">
+    <div class="v3-wrap">
+      <p class="v3-eyebrow">SALES PERFORMANCE ANALYTICS BEYOND NUMBERS</p>
+      <h2 id="reveal-title" class="v3-h2">MEET THE SOLVE<br><span class="v3-orange">COMMAND CENTER.</span></h2>
+      <div class="v3-reveal">
+        <div>
+          <p class="v3-lede" style="margin-top:0">The numbers tell you what happened. The Command Center helps you understand what's happening underneath them.</p>
+          <div class="v3-reveal-benefits">
+            <div>
+              <h3>SEE WHO'S STRONGEST AT WHAT.</h3>
+              <p>Discovery, listening, trust, problem solving, handling resistance, and other measured performance indicators.</p>
+            </div>
+            <div>
+              <h3>SEE WHAT NEEDS ATTENTION.</h3>
+              <p>Individual and team-wide improvement opportunities become visible.</p>
+            </div>
+            <div>
+              <h3>SEE WHAT'S CHANGING.</h3>
+              <p>Understand progress, trends, achievements, certification, and where management attention may add the most value.</p>
+            </div>
+          </div>
+          <div class="v3-btn-row">
+            <a class="v3-btn" href="https://training.solveframework.com/#/dashboard-demo" data-testid="link-reveal-explore">EXPLORE IT YOURSELF &rarr;</a>
+          </div>
+          <p class="v3-otp-note"><svg viewBox="0 0 20 20"><path d="M5 9V7a5 5 0 0110 0v2M4 9h12v9H4z"/></svg>Click around. Explore the data. Nothing in the demo can be changed.</p>
+        </div>
+        <div>
+          <div class="v3-shot-frame">
+            <img src="assets/screenshots/manager-command-center.png" alt="SOLVE Command Center dashboard showing team performance score of 87, 342 practice sessions, average score 82, and 28 certifications earned this month" loading="lazy" />
+          </div>
+          <p class="v3-shot-caption">ACTUAL SOLVE COMMAND CENTER: LIVE DEMO DATA</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="marketing-section marketing-light inputs-section" aria-labelledby="inputs-title"><div class="marketing-wrap"><h2 id="inputs-title" class="marketing-heading">EVERY CONVERSATION<br>CREATES INFORMATION.</h2><p class="section-body">SOLVE evaluates supported conversational inputs.</p><div class="inputs-grid"><div><span>01</span>AI PRACTICE CONVERSATIONS</div><div><span>02</span>CONVERSATION ASSESSMENTS</div><div><span>03</span>STALL AND EXCUSE ASSESSMENTS</div><div><span>04</span>SUPPORTED CALL RECORDINGS<br>AND TRANSCRIPTS</div><div><span>05</span>OTHER SUPPORTED<br>CONVERSATION INPUTS</div></div></div></section>
+  <!-- SECTION 4: THE PRODUCTION QUESTION -->
+  <section class="v3-section v3-light" aria-labelledby="production-title">
+    <div class="v3-wrap">
+      <h2 id="production-title" class="v3-h2">YOUR TOP PRODUCER MAY NOT BE<br><span class="v3-orange">YOUR BEST CONSULTANT.</span></h2>
+      <p class="v3-bigstat-question" style="margin-top:var(--space-5)">Then again, maybe they are. How do you know?</p>
+      <div class="v3-bigstat">
+        <div class="v3-bigstat-copy">
+          <p>Production tells you something important. It doesn't tell you everything.</p>
+          <ul>
+            <li>Your top producer may work more leads.</li>
+            <li>They may have more tenure.</li>
+            <li>They may possess exceptional product knowledge.</li>
+            <li>They may have a larger existing book of business.</li>
+            <li>They may have stronger referral relationships.</li>
+            <li>They may simply make more calls or work more hours.</li>
+          </ul>
+          <p>Meanwhile, another person may be exceptional at discovering what customers actually need, earning trust, handling difficult situations, solving problems, overcoming resistance, or creating experiences that generate referrals.</p>
+          <p class="v3-bigstat-question">Wouldn't you want to know?</p>
+        </div>
+        <div class="v3-bigstat-shot">
+          <img src="assets/screenshots/crops/drilldown-crop.png" alt="Individual consultant performance detail for Sofia Castellano showing Advanced level, 16 conversations completed, average score 89, with session-by-session scores" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="marketing-section marketing-dark rubric-section" aria-labelledby="rubric-title"><div class="marketing-wrap"><h2 id="rubric-title" class="marketing-heading">GOOD AT THE CONVERSATION<br>DOES NOT MEAN EASY SCORES.</h2><p class="section-body">The rubric is published, demanding, and identical every time. An 85 means the same thing today that it meant last quarter.</p><div class="rubric-grid"><article><h3>SOLVE EVALUATION ASSESSMENT</h3><ul><li>Discovery</li><li>Listening</li><li>Question quality</li><li>Motivation</li><li>Value creation</li></ul></article><article><h3>CONVERSATION ASSESSMENT</h3><ul><li>Trust</li><li>Solution alignment</li><li>Commitment</li><li>Advancement</li><li>Spouse or partner</li></ul></article><article><h3>STALL AND EXCUSE HANDLING</h3><ul><li>Price</li><li>Competitors</li><li>Shopping around</li><li>Uncertainty</li><li>Delay</li></ul></article></div></div></section>
+  <!-- SECTION 5: WHAT DO I DO WITH THE INFORMATION -->
+  <section class="v3-section v3-dark" aria-labelledby="practice-title">
+    <div class="v3-wrap">
+      <h2 id="practice-title" class="v3-h2">KNOWING WHAT NEEDS IMPROVEMENT<br>IS ONLY <span class="v3-orange">HALF THE JOB.</span></h2>
+      <p class="v3-lede">Your people still have to get better at it.</p>
+      <p class="v3-bigstat-question" style="color:#fff; margin-top:var(--space-8)">PRACTICE WITHOUT PRACTICING ON YOUR CUSTOMERS.</p>
+      <div class="v3-practice">
+        <div>
+          <p class="v3-sub" style="margin-top:0">SOLVE gives your team a private environment to practice realistic customer situations, receive immediate feedback, and build skills through repetition before those situations happen with real customers.</p>
+          <div class="v3-idea-grid">
+            <div class="v3-idea"><b>PRACTICE</b><span>Realistic industry-specific customer situations.</span></div>
+            <div class="v3-idea"><b>MEASURE</b><span>Performance evaluated against the same consistent framework.</span></div>
+            <div class="v3-idea"><b>COACH</b><span>Immediate feedback on what went well and what could improve.</span></div>
+            <div class="v3-idea"><b>REPEAT</b><span>Practice again until the behavior becomes more natural.</span></div>
+          </div>
+          <div class="v3-btn-row">
+            <a class="v3-btn" href="https://training.solveframework.com/#/demo" data-testid="link-practice-try-conversation">TRY ONE CONVERSATION</a>
+          </div>
+          <p class="v3-otp-note"><svg viewBox="0 0 20 20"><path d="M5 9V7a5 5 0 0110 0v2M4 9h12v9H4z"/></svg>One conversation per verified email. No credit card.</p>
+        </div>
+        <div class="v3-practice-shot">
+          <img src="assets/screenshots/platform-roleplay.jpg" alt="Live discovery session practice interface showing an AI customer persona and a real-time coached conversation" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="marketing-section marketing-light academy-section" aria-labelledby="academy-title"><div class="marketing-wrap"><p class="marketing-eyebrow marketing-orange">THE SOLVE ACADEMY</p><h2 id="academy-title" class="marketing-heading">NOW THAT YOU KNOW WHAT TO<br>IMPROVE,<br>YOU NEED A WAY TO IMPROVE IT.</h2><div class="progression"><div><b>01</b>PRACTICE</div><i>→</i><div><b>02</b>COACHING</div><i>→</i><div><b>03</b>IMPROVEMENT</div><i>→</i><div><b>04</b>ACHIEVEMENT</div><i>→</i><div><b>05</b>CERTIFICATION</div></div></div></section>
+  <!-- SECTION 6: MAKE THE MANAGER SCALABLE -->
+  <section class="v3-section v3-dark" aria-labelledby="scalable-title">
+    <div class="v3-wrap">
+      <h2 id="scalable-title" class="v3-h2">YOU SHOULDN'T HAVE TO<br><span class="v3-orange">COACH EVERYTHING.</span></h2>
+      <p class="v3-lede">SOLVE helps you know where your attention is actually needed.</p>
+      <p class="v3-sub">Your people can practice without waiting for you. They can receive immediate feedback without waiting for you. They can work toward achievement and certification without you manually tracking every exercise. SOLVE can also use supported real-world communication to add another layer of performance information.</p>
+      <div class="v3-flow">
+        <div class="v3-flow-inputs">
+          <span class="v3-flow-chip">AI PRACTICE</span>
+          <span class="v3-flow-chip">CALL TRANSCRIPTS</span>
+          <span class="v3-flow-chip">SUPPORTED RECORDINGS</span>
+          <span class="v3-flow-chip">EMAIL</span>
+          <span class="v3-flow-chip">TEXT / OUTBOUND</span>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:var(--space-3)"><span class="v3-flow-arrow">&darr;</span></div>
+      <div style="display:flex; justify-content:center;"><div class="v3-flow-result">SOLVE PERFORMANCE INTELLIGENCE</div></div>
+      <div style="text-align:center; margin-top:var(--space-3)"><span class="v3-flow-arrow">&darr;</span></div>
+      <div style="display:flex; justify-content:center;"><div class="v3-flow-final">COMMAND CENTER</div></div>
+      <p class="v3-scalable-note">When someone genuinely needs your attention, you have better information about where your coaching time may have the greatest value.</p>
+      <div class="v3-scalable-shot">
+        <img src="assets/screenshots/crops/team-health-crop.png" alt="Team Health Overview showing team performance score 87, framework mastery radar, and top performers Sarah Johnson, Mike Davis, Alex Thompson, Jessica Lee, and Chris Williams" loading="lazy" />
+      </div>
+      <p class="v3-mgr-note">"I can open this and get a snapshot of what's happening across my team without reviewing every practice session myself."</p>
+      <div class="v3-close-statement">SOLVE DOESN'T REPLACE COACHING.<br><span>IT MAKES COACHING SCALABLE.</span></div>
+    </div>
+  </section>
 
-  <section class="marketing-section marketing-light framework-section-new" aria-labelledby="framework-title"><div class="marketing-wrap marketing-narrow"><p class="marketing-eyebrow">THE SOLVE FRAMEWORK</p><h2 id="framework-title" class="sr-only">The SOLVE Framework</h2><dl class="solve-acronym"><div><dt>S</dt><dd>Situation</dd></div><div><dt>O</dt><dd>Open with questions</dd></div><div><dt>L</dt><dd>Listen for the outcome</dd></div><div><dt>V</dt><dd>Visualize success</dd></div><div><dt>E</dt><dd>Engineer the solution</dd></div></dl></div></section>
+  <!-- SECTION 7: ACADEMY, CERTIFICATION & REWARDS -->
+  <section class="v3-section v3-light" aria-labelledby="academy-title">
+    <div class="v3-wrap">
+      <h2 id="academy-title" class="v3-h2">KNOW WHAT TO IMPROVE.<br><span class="v3-orange">THEN IMPROVE IT.</span></h2>
+      <div class="v3-academy-flow">
+        <span class="v3-academy-step">PRACTICE</span><span class="v3-academy-arrow">&rarr;</span>
+        <span class="v3-academy-step">COACH</span><span class="v3-academy-arrow">&rarr;</span>
+        <span class="v3-academy-step">ACHIEVE</span><span class="v3-academy-arrow">&rarr;</span>
+        <span class="v3-academy-step">CERTIFY</span><span class="v3-academy-arrow">&rarr;</span>
+        <span class="v3-academy-step">REWARD</span>
+      </div>
+      <p class="v3-sub" style="margin-inline:auto; text-align:center; margin-top:var(--space-8)">The Academy gives consultants a path to practice and demonstrate proficiency rather than simply completing training content.</p>
+      <div class="v3-academy-visual">
+        <div class="v3-badge-card"><img src="assets/badges/badge_beginner_v2.png" alt="Beginner certification badge" loading="lazy"><div><b>BEGINNER</b><span>First scenarios completed</span></div></div>
+        <div class="v3-badge-card"><img src="assets/badges/badge_advanced_v2.png" alt="Advanced certification badge" loading="lazy"><div><b>ADVANCED</b><span>5 of 5 scenarios at 85%+</span></div></div>
+        <div class="v3-badge-card"><img src="assets/badges/certificate_v2.png" alt="Certification icon" loading="lazy"><div><b>CERTIFIED</b><span>Framework proficiency demonstrated</span></div></div>
+      </div>
+      <div class="v3-invest-box">
+        <h3>WHEN YOUR PEOPLE GET BETTER, WE INVEST BACK IN YOU.</h3>
+        <p>The consultant earns recognition and certification. The company earns applicable dollar credits tied to certification achievement.</p>
+        <ul class="v3-invest-list">
+          <li>Better-prepared consultants</li>
+          <li>Better customer experiences</li>
+          <li>Potential for stronger conversion</li>
+          <li>Potential for increased referrals</li>
+          <li>A more capable team</li>
+          <li>Earned certification credits for the business</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <section class="marketing-section marketing-dark improvement-section" aria-labelledby="improvement-title"><div class="marketing-wrap"><h2 id="improvement-title" class="marketing-heading">TRAINING SHOULD NOT END<br>WHEN THE CLASS DOES.</h2><p class="section-body">SOLVE creates a continuous improvement loop where management can identify opportunities, employees can practice them, and progress can be measured over time.</p><ol class="improvement-loop"><li>MEASURE</li><li>IDENTIFY</li><li>PRACTICE</li><li>COACH</li><li>CERTIFY</li><li>MEASURE AGAIN</li></ol></div></section>
+  <!-- SECTION 8: ADAPTIVE SCENARIO INTELLIGENCE -->
+  <section class="v3-section v3-dark" aria-labelledby="adaptive-title">
+    <div class="v3-wrap">
+      <p class="v3-eyebrow">THE NEXT EVOLUTION OF SOLVE</p>
+      <h2 id="adaptive-title" class="v3-h2">WHAT IF THE SYSTEM KNEW WHAT EACH PERSON<br><span class="v3-orange">NEEDED TO PRACTICE NEXT?</span></h2>
+      <div class="v3-adaptive-flow">
+        <span>MEASURE</span><span class="arrow">&rarr;</span><span>IDENTIFY</span><span class="arrow">&rarr;</span><span>PERSONALIZE</span><span class="arrow">&rarr;</span><span>PRACTICE</span><span class="arrow">&rarr;</span><span>RE-MEASURE</span><span class="arrow">&rarr;</span><span>ADAPT</span>
+      </div>
+      <p class="v3-sub">The future of SOLVE is not making everyone practice everything. It's using demonstrated performance to help determine what each person should practice next.</p>
+      <span class="v3-illustrative-tag">ILLUSTRATIVE ADAPTIVE INTELLIGENCE: NOT YET LIVE</span>
+      <div class="v3-adaptive-card">
+        <h4>Sofia Castellano</h4>
+        <dl>
+          <div class="v3-adaptive-row"><dt>Current demonstrated strength</dt><dd>Advanced level, 16 conversations completed, average score 89</dd></div>
+          <div class="v3-adaptive-row"><dt>Current improvement opportunity</dt><dd>Consistency on price-anchored objection scenarios</dd></div>
+          <div class="v3-adaptive-row v3-adaptive-row--future"><dt>Illustrative future targeted practice</dt><dd>Additional price-objection scenarios recommended automatically</dd></div>
+        </dl>
+      </div>
+      <p class="v3-adaptive-disclosure">As proficiency improves, future adaptive practice can evolve toward the next highest-value opportunity. This capability is not yet deployed. Today, managers and consultants choose which scenarios to practice.</p>
+    </div>
+  </section>
 
-  <section class="marketing-section marketing-light credit-section" aria-labelledby="credit-title"><div class="marketing-wrap"><h2 id="credit-title" class="marketing-heading">WHEN YOUR PEOPLE IMPROVE,<br>WE PAY YOU BACK.</h2><p class="section-body">Every certification level a person earns sends $50 back to your company. Four levels, $200 per person. Plus a challenge coin and a printed certificate for them.</p><p class="credit-bold">Training that returns money when it works.<br>Name another vendor who does that.</p><div class="progression progression--credit"><div><b>01</b>PRACTICE</div><i>→</i><div><b>02</b>PASS</div><i>→</i><div><b>03</b>EARN COINS</div><i>→</i><div><b>04</b>ADVANCE</div><i>→</i><div><b>05</b>CERTIFY</div><i>→</i><div><b>06</b>EARN COMPANY CREDITS</div></div></div></section>
+  <!-- SECTION 9: BUILD THE TEAM, TOO -->
+  <section class="v3-section v3-light" aria-labelledby="candidate-title">
+    <div class="v3-wrap">
+      <h2 id="candidate-title" class="v3-h2">WHAT ABOUT THE PEOPLE<br><span class="v3-orange">WHO AREN'T ON YOUR TEAM YET?</span></h2>
+      <div class="v3-candidate">
+        <p>A resume tells you where someone worked. An interview tells you how they interview. What happens when you put them into realistic customer situations?</p>
+        <p>Candidate screening would evaluate prospective team members through structured scenarios and provide performance information that can help inform hiring and team-fit decisions.</p>
+        <p>Management makes hiring decisions. SOLVE provides additional performance information.</p>
+        <span class="v3-candidate-tag">IN DEVELOPMENT: NOT YET AVAILABLE</span>
+      </div>
+    </div>
+  </section>
 
-  <section class="marketing-section marketing-dark practice-section" aria-labelledby="practice-title"><div class="marketing-wrap practice-grid"><div><h2 id="practice-title" class="marketing-heading">PRACTICE WITHOUT<br><span class="marketing-orange">PRACTICING ON YOUR<br>CUSTOMERS.</span></h2><ul class="orange-check-list"><li>Realistic conversations in a safe environment.</li><li>Scenarios change. Customers respond naturally.</li><li>Resistance changes. No two conversations are identical.</li></ul><p>AI is the practice environment.</p><p>The intelligence is the value.</p></div><div class="score-graphic"><b>85</b><span>NO EASY 85S. THE RUBRIC DOES NOT BEND.</span></div></div></section>
+  <!-- SECTION 10: MORE WAYS SOLVE HELPS -->
+  <section class="v3-section v3-light" aria-labelledby="more-title" style="background:var(--color-surface-2)">
+    <div class="v3-wrap">
+      <h2 id="more-title" class="v3-h2">MORE WAYS SOLVE HELPS.</h2>
+      <div class="v3-more-grid">
+        <div class="v3-more-card">
+          <h3>REAL CONVERSATIONS</h3>
+          <p>Evaluate supported transcripts and recordings against the same performance framework.</p>
+          <a class="v3-learn" href="why-solve-works.html" data-testid="link-more-real-conversations">LEARN MORE &rarr;</a>
+        </div>
+        <div class="v3-more-card">
+          <h3>EVERYDAY COACH</h3>
+          <p>Evaluate and improve important customer-facing emails, texts, follow-up, and outbound communication.</p>
+          <a class="v3-learn" href="why-solve-works.html" data-testid="link-more-everyday-coach">LEARN MORE &rarr;</a>
+        </div>
+        <div class="v3-more-card">
+          <h3>CUSTOM SCENARIOS</h3>
+          <p>Industry-specific practice built around situations your people actually encounter.</p>
+          <a class="v3-learn" href="methodology.html" data-testid="link-more-custom-scenarios">LEARN MORE &rarr;</a>
+        </div>
+        <div class="v3-more-card">
+          <h3>RESEARCH &amp; METHODOLOGY</h3>
+          <p>Understand the framework, scoring philosophy, and research informing SOLVE.</p>
+          <a class="v3-learn" href="research.html" data-testid="link-more-research">LEARN MORE &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="marketing-section marketing-light candidate-section" aria-labelledby="candidate-title"><div class="marketing-wrap marketing-narrow"><p class="marketing-eyebrow marketing-orange">BEFORE THEY ARE ON YOUR PAYROLL</p><h2 id="candidate-title" class="marketing-heading">HOW MANY BAD HIRES<br><span class="marketing-orange">DID YOU FIND OUT ABOUT<br>TOO LATE?</span></h2><p>A resume tells you where someone has been. An interview tells you how they talk about themselves. Neither one tells you how they will handle your customer.</p><p>Put any candidate through three scenarios. Under thirty minutes of their time. You get three scores against the same rubric your team is measured on.</p><p class="credit-bold">Now you are not guessing. You are comparing.</p><a class="marketing-button" href="#candidate-comparison">SCREEN A CANDIDATE</a></div></section>
+  <!-- SECTION 11: THE WHOLE SYSTEM -->
+  <section class="v3-section v3-light" aria-labelledby="system-title">
+    <div class="v3-wrap">
+      <h2 id="system-title" class="v3-h2">ONE PERFORMANCE SYSTEM.</h2>
+      <div class="v3-system-loop">
+        <div class="v3-system-step"><b>SCREEN</b><span>Evaluate prospective talent.</span></div>
+        <div class="v3-system-arrow">&rarr;</div>
+        <div class="v3-system-step"><b>MEASURE</b><span>Understand current performance.</span></div>
+        <div class="v3-system-arrow">&rarr;</div>
+        <div class="v3-system-step"><b>PRACTICE</b><span>Develop specific skills.</span></div>
+        <div class="v3-system-arrow">&rarr;</div>
+        <div class="v3-system-step"><b>COACH</b><span>Provide immediate feedback.</span></div>
+        <div class="v3-system-arrow">&rarr;</div>
+        <div class="v3-system-step"><b>IMPROVE</b><span>Track progress.</span></div>
+        <div class="v3-system-arrow">&rarr;</div>
+        <div class="v3-system-step"><b>CERTIFY</b><span>Demonstrate proficiency.</span></div>
+        <div class="v3-system-arrow">&rarr;</div>
+        <div class="v3-system-step"><b>REWARD</b><span>Recognize individual and organizational achievement.</span></div>
+        <div class="v3-system-arrow">&rarr;</div>
+        <div class="v3-system-step"><b>MEASURE AGAIN</b><span>The loop continues.</span></div>
+      </div>
+      <div class="v3-stakeholders">
+        <div class="v3-stakeholder"><h4>FOR THE MANAGER</h4><p>Visibility without watching everything.</p></div>
+        <div class="v3-stakeholder"><h4>FOR THE CONSULTANT</h4><p>Development without waiting for the manager.</p></div>
+        <div class="v3-stakeholder"><h4>FOR THE COMPANY</h4><p>A repeatable system for developing its people.</p></div>
+      </div>
+    </div>
+  </section>
 
-  <section id="candidate-comparison" class="marketing-section marketing-light candidate-comparison" aria-labelledby="comparison-title"><div class="marketing-wrap"><h2 id="comparison-title" class="sr-only">Candidate Comparison Example</h2><div class="candidate-card"><div class="candidate-top"><div><span>YOUR TEAM RANGE</span><b>77–88</b></div><div><span>TARGET</span><b>85</b></div><p>3 scenarios · 30 min</p></div><div class="candidate-rows"><article><h3>Candidate A</h3><strong>BELOW YOUR TEAM FLOOR</strong><dl><div><dt>SCENARIO 1</dt><dd>30</dd></div><div><dt>SCENARIO 2</dt><dd>35</dd></div><div><dt>SCENARIO 3</dt><dd>41</dd></div></dl></article><article><h3>Candidate B</h3><strong>INSIDE YOUR TEAM RANGE</strong><dl><div><dt>SCENARIO 1</dt><dd>66</dd></div><div><dt>SCENARIO 2</dt><dd>77</dd></div><div><dt>SCENARIO 3</dt><dd>72</dd></div></dl></article></div><p class="candidate-bottom">Pass with confidence, or hire and know exactly what the Academy needs to build first.</p><p class="example-disclaimer example-disclaimer--light">ILLUSTRATIVE EXAMPLE DATA — ACME SALES, A FICTIONAL ACCOUNT</p></div></div></section>
+  <!-- SECTION 12: PRICING -->
+  <section class="v3-section v3-light" aria-labelledby="pricing-title" style="background:var(--color-surface-2)">
+    <div class="v3-wrap">
+      <h2 id="pricing-title" class="v3-h2">BUILT FOR REAL SALES TEAMS.</h2>
+      <p class="v3-lede">Not just companies with enterprise training budgets.</p>
+      <div class="v3-pricing-cards">
+        <div class="v3-price-card">
+          <h3>TEAM</h3>
+          <div class="v3-price-num">$49</div><div class="v3-price-unit">per seat / month</div>
+          <div class="v3-price-range">1&ndash;5 seats</div>
+        </div>
+        <div class="v3-price-card v3-price-card--featured">
+          <h3>OFFICE</h3>
+          <div class="v3-price-num">$45</div><div class="v3-price-unit">per seat / month</div>
+          <div class="v3-price-range">6&ndash;20 seats</div>
+        </div>
+        <div class="v3-price-card">
+          <h3>COMPANY</h3>
+          <div class="v3-price-num">$41</div><div class="v3-price-unit">per seat / month</div>
+          <div class="v3-price-range">21&ndash;35 seats</div>
+        </div>
+        <div class="v3-price-card">
+          <h3>ENTERPRISE</h3>
+          <div class="v3-price-num">Custom</div><div class="v3-price-unit">contact us</div>
+          <div class="v3-price-range">36+ seats</div>
+        </div>
+      </div>
+      <div class="v3-btn-row">
+        <a class="v3-btn" href="pricing.html" data-testid="link-pricing-see-pricing">SEE PRICING &rarr;</a>
+        <a class="v3-btn v3-btn--ghost" href="https://training.solveframework.com/#/signup" data-testid="link-pricing-test-my-team">TEST MY TEAM &rarr;</a>
+      </div>
+    </div>
+  </section>
 
-  <section class="marketing-section marketing-dark coach-section" aria-labelledby="coach-title"><div class="marketing-wrap marketing-narrow"><p class="marketing-eyebrow marketing-orange">THE EVERYDAY COACH</p><h2 id="coach-title" class="marketing-heading">MOST MESSAGES GET SENT<br><span class="marketing-orange">AND THEN GET JUDGED.</span></h2><p>Practice is not the only place SOLVE works. Paste the email before you send it. Paste the text blast before it reaches every customer you have.</p><p>The coach scores it against the same rubric, tells you what is weak, and rewrites it for the strongest response.</p><ul class="orange-check-list"><li>Before you send the email</li><li>Before the campaign text goes out</li><li>Before the follow up that decides the deal</li></ul><a class="marketing-button" href="https://training.solveframework.com/#/signup">TRY THE COACH</a></div></section>
+  <!-- SECTION 13: FINAL CLOSE -->
+  <section class="v3-section v3-final v3-dark" aria-labelledby="final-title">
+    <div class="v3-wrap">
+      <p class="v3-eyebrow" style="font-size:var(--text-xs)">PRACTICE. PERFORMANCE. PERIOD.</p>
+      <h2 id="final-title" class="v3-h1">YOU KNOW WHO SELLS THE MOST.<br><span class="v3-orange">NOW FIND OUT WHY.</span></h2>
+      <p class="v3-lede">See what your numbers aren't telling you, give your people a place to improve, and know where your attention can make the greatest difference.</p>
+      <div class="v3-btn-row">
+        <a class="v3-btn" href="https://training.solveframework.com/#/dashboard-demo" data-testid="link-final-see-command-center">SEE THE COMMAND CENTER</a>
+        <a class="v3-btn v3-btn--ghost" href="https://training.solveframework.com/#/signup" data-testid="link-final-test-my-team">TEST MY TEAM</a>
+      </div>
+    </div>
+  </section>
 
-  <section id="coach-example" class="marketing-section marketing-dark coach-example" aria-labelledby="coach-example-title"><div class="marketing-wrap"><h2 id="coach-example-title" class="sr-only">Coach Before and After Example</h2><div class="coach-comparison"><article><p class="card-label">YOUR DRAFT</p><b class="coach-score">58</b><blockquote>"Just following up to see if you had any questions about the quote I sent over. Let me know either way."</blockquote><p class="weak-copy">WEAK:<br>NO REASON TO REPLY · NO NEXT STEP · NO VALUE</p></article><div class="coach-arrow" aria-hidden="true">↓</div><article><p class="card-label">COACH REWRITE</p><b class="coach-score performance-positive">91</b><blockquote>"You mentioned the install had to land before your busy season. I mapped the quote to a start date that protects that. Worth five minutes Thursday to confirm it works?"</blockquote><p class="positive-copy">ANCHORED TO THEIR OUTCOME · SPECIFIC NEXT STEP · EASY YES</p></article></div><p class="example-disclaimer">ILLUSTRATIVE EXAMPLE DATA — ACME SALES, A FICTIONAL ACCOUNT</p></div></section>
-
-  <section class="marketing-section marketing-light final-cta" aria-labelledby="final-cta-title"><div class="marketing-wrap marketing-narrow"><h2 id="final-cta-title" class="marketing-heading">DO NOT TAKE OUR WORD<br>FOR IT.<br><span class="marketing-orange">TEST YOUR TEAM.</span></h2><p>Give a small group of your people the same conversational challenge. Let SOLVE evaluate what happens. Then see what the Command Center finds.</p><p class="credit-bold">One platform: screen who you hire, coach who you have, and check every message before it goes out.</p><div class="final-actions"><a class="marketing-button" href="https://training.solveframework.com/#/signup">TEST MY TEAM</a><a class="marketing-button marketing-button--secondary" href="https://training.solveframework.com/#/demo">SEE A SOLVE DEMO</a></div><p class="final-note">No long term decision required. Only see whether the information has value.</p></div></section>
-
-  <section class="marketing-section marketing-light promise-section" aria-labelledby="promise-title"><div class="marketing-wrap"><aside class="promise-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5.2-3.4 8.8-8 10-4.6-1.2-8-4.8-8-10V6l8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg><p id="promise-title">The rubric is published before you start. Same standard for every rep, every conversation, every month.</p></aside></div></section>
 </main>
 
-<footer class="marketing-footer">
-  <div class="marketing-wrap">
-    <div class="marketing-footer-grid">
-      <div class="marketing-footer-brand">
-        <p class="footer-statement">YOU KNOW WHO SELLS THE<br>MOST. <span class="marketing-orange">DO YOU KNOW WHY?</span></p>
-        <a href="/" class="marketing-footer-logo" aria-label="SOLVE Framework home"><img src="/solve-wordmark-bigtag-transparent.png" alt="SOLVE Framework - Practice. Performance. Period."></a>
-        <p class="footer-tagline">PRACTICE. PERFORMANCE. PERIOD.</p>
-        <p class="footer-copyright">© 2026 SOLVE Framework. All rights reserved.</p>
+<footer class="v3-footer">
+  <div class="v3-wrap v3-footer-grid">
+    <div class="v3-footer-brand">
+      <a href="/" aria-label="SOLVE Framework home">
+        <img src="/solve-wordmark-bigtag-transparent.png" alt="SOLVE Framework" style="max-width:180px; display:block;">
+      </a>
+      <p class="tagline">Practice. Performance. Period.</p>
+      <p class="copyright">&copy; 2026 The SOLVE Framework&trade;. All rights reserved.</p>
+    </div>
+    <div class="v3-footer-links">
+      <div class="v3-footer-col">
+        <h2>Product</h2>
+        <a href="#command-center" data-testid="link-footer-command-center">Command Center</a>
+        <a href="certification.html" data-testid="link-footer-academy">Academy &amp; Certification</a>
+        <a href="methodology.html" data-testid="link-footer-methodology">Methodology</a>
+        <span data-testid="text-footer-candidate-screening" style="color:rgba(255,255,255,.45)">Candidate Screening (coming soon)</span>
+        <a href="pricing.html" data-testid="link-footer-pricing">Pricing</a>
       </div>
-      <nav class="marketing-footer-links" aria-label="Footer navigation">
-        <section class="marketing-footer-column">
-          <h2>Product</h2>
-          <a href="methodology.html">Methodology</a>
-          <a href="certification.html">Certification</a>
-          <a href="manager-dashboard.html">Manager Dashboard</a>
-        </section>
-        <section class="marketing-footer-column">
-          <h2>Resources</h2>
-          <a href="why-solve-works.html">Why SOLVE Works</a>
-          <a href="research.html">Research</a>
-          <a href="conflict-resolution.html">Conflict Resolution</a>
-          <a href="faq.html">FAQ</a>
-        </section>
-        <section class="marketing-footer-column">
-          <h2>Company</h2>
-          <a href="about-wade.html">About Wade</a>
-          <a href="books.html">Books</a>
-          <a href="pricing.html">Pricing</a>
-        </section>
-        <section class="marketing-footer-column">
-          <h2>Account</h2>
-          <a href="https://training.solveframework.com/#/signup">Get Started</a>
-        </section>
-        <section class="marketing-footer-column">
-          <h2>Vault</h2>
-          <a href="https://training.solveframework.com/#/admin/login">Vault</a>
-        </section>
-        <section class="marketing-footer-column">
-          <h2>Legal</h2>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms-of-service.html">Terms of Service</a>
-          <a href="trademark-guidelines.html">Trademark Guidelines</a>
-        </section>
-      </nav>
+      <div class="v3-footer-col">
+        <h2>Resources</h2>
+        <a href="books.html" data-testid="link-footer-books">Books</a>
+        <a href="research.html" data-testid="link-footer-research">Research</a>
+        <a href="faq.html" data-testid="link-footer-faq">FAQ</a>
+        <a href="why-solve-works.html" data-testid="link-footer-why-solve-works">Why SOLVE Works</a>
+        <a href="conflict-resolution.html" data-testid="link-footer-conflict-resolution">Conflict Resolution</a>
+      </div>
+      <div class="v3-footer-col">
+        <h2>Company</h2>
+        <a href="about-wade.html" data-testid="link-footer-about-wade">About Wade</a>
+        <a href="mailto:hello@solveframework.com" data-testid="link-footer-contact">Contact</a>
+      </div>
+      <div class="v3-footer-col">
+        <h2>Existing Users</h2>
+        <a href="https://training.solveframework.com/#/login" data-testid="link-footer-login">Login</a>
+        <a href="https://training.solveframework.com/#/practice" data-testid="link-footer-practice">Practice</a>
+        <a href="https://training.solveframework.com/#/command-center" data-testid="link-footer-command-center-login">Command Center</a>
+      </div>
+      <div class="v3-footer-col">
+        <h2>Legal</h2>
+        <a href="privacy-policy.html" data-testid="link-footer-privacy">Privacy Policy</a>
+        <a href="terms-of-service.html" data-testid="link-footer-terms">Terms of Service</a>
+        <a href="trademark-guidelines.html" data-testid="link-footer-trademark">Trademark Guidelines</a>
+      </div>
     </div>
   </div>
+  <div class="v3-wrap v3-footer-bottom">
+    <p>SOLVE Framework&trade;</p>
+    <p class="copy">Practice. Performance. Period. &copy; 2026 The SOLVE Framework&trade;. All rights reserved.</p>
+  </div>
 </footer>
+
 <script>
-  (function () {
-    var header = document.getElementById('site-header');
-    var toggle = header && header.querySelector('.marketing-nav-toggle');
-    var nav = document.getElementById('marketing-primary-nav');
-    var login = nav && nav.querySelector('.marketing-nav-login');
-    var loginToggle = login && login.querySelector('.marketing-nav-login-toggle');
-    var loginMenu = login && login.querySelector('.marketing-nav-login-menu');
-    if (!header || !toggle || !nav) return;
-
-    function setLoginMenu(open, returnFocus) {
-      if (!loginToggle || !loginMenu) return;
-      loginToggle.setAttribute('aria-expanded', String(open));
-      loginMenu.hidden = !open;
-      if (!open && returnFocus) loginToggle.focus();
+(function(){
+  var header = document.getElementById('site-header');
+  var toggle = document.getElementById('nav-toggle');
+  toggle.addEventListener('click', function(){
+    var open = header.getAttribute('data-menu-open') === 'true';
+    header.setAttribute('data-menu-open', open ? 'false' : 'true');
+    toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+  });
+  document.querySelectorAll('.v3-nav-item').forEach(function(item){
+    var btn = item.querySelector('button');
+    btn.addEventListener('click', function(){
+      var isOpen = item.getAttribute('data-open') === 'true';
+      document.querySelectorAll('.v3-nav-item').forEach(function(i){ i.setAttribute('data-open','false'); i.querySelector('button').setAttribute('aria-expanded','false'); });
+      item.setAttribute('data-open', isOpen ? 'false' : 'true');
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.v3-nav-item')) {
+      document.querySelectorAll('.v3-nav-item').forEach(function(i){ i.setAttribute('data-open','false'); i.querySelector('button').setAttribute('aria-expanded','false'); });
     }
-
-    function setMenu(open) {
-      header.dataset.menuOpen = String(open);
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-      if (!open) setLoginMenu(false, false);
-    }
-
-    toggle.addEventListener('click', function () {
-      setMenu(toggle.getAttribute('aria-expanded') !== 'true');
-    });
-
-    if (loginToggle) {
-      loginToggle.addEventListener('click', function () {
-        setLoginMenu(loginToggle.getAttribute('aria-expanded') !== 'true', false);
-      });
-    }
-
-    nav.addEventListener('click', function (event) {
-      if (event.target.closest('a')) setMenu(false);
-    });
-
-    document.addEventListener('click', function (event) {
-      if (login && !login.contains(event.target)) setLoginMenu(false, false);
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && loginToggle && loginToggle.getAttribute('aria-expanded') === 'true') {
-        event.preventDefault();
-        setLoginMenu(false, true);
-        return;
-      }
-      if (event.key === 'Escape') setMenu(false);
-    });
-  })();
+  });
+})();
 </script>
+
 </body>
 </html>
