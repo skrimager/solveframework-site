@@ -4,112 +4,195 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>About Wade | The SOLVE Framework&trade;</title>
-<meta name="description" content="Wade Skrimager, creator of The SOLVE Framework." />
+<meta name="description" content="Wade Skrimager built SOLVE to answer a question production numbers alone can't: what is each person actually good at, and where does coaching matter most?" />
 <meta property="og:title" content="About Wade - The SOLVE Framework&trade;" />
-<meta property="og:description" content="Wade Skrimager, creator of The SOLVE Framework." />
+<meta property="og:description" content="Wade Skrimager built SOLVE to answer a question production numbers alone can't: what is each person actually good at, and where does coaching matter most?" />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://api.fontshare.com" />
-<link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital@0;1&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#050C1C">
+<meta name="theme-color" content="#05162D">
 
 <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="homepage-v3.css" />
+<style>
+  .v3-about-hero { padding: calc(var(--space-16) + 40px) 0 var(--space-10); background: var(--color-bg); }
+  .v3-about-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: -0.01em; color: var(--color-navy-deep); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: var(--space-3) 0 0; }
+  .v3-about-eyebrow { display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); }
+  .v3-about-body { padding: var(--space-4) 0 var(--space-14); background: var(--color-bg); }
+  .v3-about-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: var(--space-12); align-items: start; }
+  .v3-about-copy p { font-size: 1.08rem; line-height: 1.7; color: var(--color-navy); margin: 0 0 var(--space-5); }
+  .v3-about-copy h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--color-navy-deep); font-size: 1.4rem; margin: var(--space-8) 0 var(--space-4); }
+  .v3-about-pillars { list-style: none; margin: var(--space-5) 0 var(--space-7); padding: 0; display: grid; gap: var(--space-3); }
+  .v3-about-pillars li { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); align-items: flex-start; font-size: 1.02rem; line-height: 1.5; color: var(--color-navy); background: #fff; border: 1px solid rgba(5,22,45,0.08); border-radius: 10px; padding: var(--space-3) var(--space-4); }
+  .v3-about-pillars strong { color: var(--color-primary); font-weight: 700; flex: 0 0 auto; }
+  @media (max-width: 480px) {
+    .v3-about-pillars li { flex-direction: column; gap: var(--space-1); }
+  }
+  .v3-about-side { background: var(--color-navy-deep); border-radius: 16px; padding: var(--space-8) var(--space-7); color: #fff; position: sticky; top: 100px; }
+  .v3-about-side h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-primary); margin: 0 0 var(--space-4); line-height: 1.4; }
+  .v3-about-side ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+  .v3-about-side li { font-size: 0.98rem; line-height: 1.5; color: rgba(255,255,255,0.85); padding-bottom: var(--space-3); border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .v3-about-side li:last-child { border-bottom: none; padding-bottom: 0; }
+  .v3-about-links { margin-top: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
+  .v3-about-links a { color: #fff; background: var(--color-primary); text-align: center; padding: var(--space-3) var(--space-4); border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+  .v3-about-links a.v3-about-link-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.3); }
+  @media (max-width: 860px) {
+    .v3-about-grid { grid-template-columns: 1fr; }
+    .v3-about-side { position: static; }
+  }
+</style>
 </head>
-<body>
-
+<body class="v3-page">
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header" id="site-header">
-  <div class="wrap header-inner">
-    <a href="/" class="logo logo--brand" aria-label="The SOLVE Framework - Home">
-      <img src="/solve-wordmark-bigtag-transparent.png" alt="SOLVE Framework - Practice. Performance. Period." class="logo-wordmark">
+<a class="v3-announce" href="pricing.html#manager-dashboard" data-testid="link-announce-pricing">
+  <strong>Dashboard pricing: 25% off, locked for your first year</strong>, plus an extra 20% off with annual prepay. Price increases September 1.
+</a>
+
+<header class="v3-header" id="site-header">
+  <div class="v3-wrap v3-header-inner">
+    <a href="/" class="v3-logo" aria-label="SOLVE Framework home">
+      <img src="/solve-wordmark-bigtag-transparent.png" alt="SOLVE Framework - Practice. Performance. Period." />
     </a>
-    <nav class="main-nav" aria-label="Primary">
-      <div class="nav-item">
-        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Product <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="nav-dropdown">
-          <a href="methodology.html">Methodology &amp; Real Call Scoring</a>
-          <a href="certification.html">Certification</a>
-          <a href="manager-dashboard.html">Manager Dashboard</a>
-        </div>
-      </div>
-      <div class="nav-item">
-        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Why SOLVE <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="nav-dropdown">
-          <a href="why-solve-works.html">Why SOLVE Works</a>
-          <a href="research.html">Research</a>
-        </div>
-      </div>
-      <a href="conflict-resolution.html">Conflict Resolution</a>
-      <div class="nav-item">
-        <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">About <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="nav-dropdown">
-          <a href="about-wade.html">About Wade</a>
-          <a href="books.html">Books</a>
-        </div>
-      </div>
-      <a href="pricing.html">Pricing</a>
-      <a href="faq.html">FAQ</a>
-    </nav>
-    <a class="btn btn-primary btn-sm" href="https://training.solveframework.com/#/signup" data-testid="link-nav-login">Get Started</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button class="v3-nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
+    <nav class="v3-nav" id="primary-nav" aria-label="Primary navigation">
+      <div class="v3-nav-links">
+        <a href="index.html#command-center" data-testid="link-nav-command-center">Command Center</a>
+        <a href="why-solve-works.html" data-testid="link-nav-how-it-works">How It Works</a>
+        <a href="pricing.html" data-testid="link-nav-pricing">Pricing</a>
+        <div class="v3-nav-item" data-open="false">
+          <button type="button" aria-expanded="false" data-testid="button-nav-resources">Resources
+            <svg class="v3-nav-caret" viewBox="0 0 10 7"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="v3-nav-dropdown">
+            <a href="certification.html" data-testid="link-nav-academy">Academy &amp; Certification</a>
+            <a href="books.html" data-testid="link-nav-books">Books</a>
+            <a href="research.html" data-testid="link-nav-research">Research</a>
+            <a href="methodology.html" data-testid="link-nav-methodology">Methodology</a>
+            <a href="faq.html" data-testid="link-nav-faq">FAQ</a>
+          </div>
+        </div>
+        <a href="about-wade.html" data-testid="link-nav-about" aria-current="page">About</a>
+      </div>
+      <div class="v3-nav-actions">
+        <a class="v3-nav-login" href="https://training.solveframework.com/#/login" data-testid="link-nav-login">LOGIN</a>
+        <a class="v3-nav-cta" href="https://training.solveframework.com/#/signup" data-testid="link-nav-test-my-team">TEST MY TEAM</a>
+      </div>
+    </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="subpage-hero">
-    <div class="wrap">
-      <span class="subpage-eyebrow">About</span>
-      <h1 class="subpage-title">About Wade</h1>
-    </div>
-  </section>
-  <section class="section">
-    <div class="wrap">
-      <div class="subpage-placeholder">
-        <strong>Content pending</strong>
-        Wade is providing the full copy for this page directly. This is a structural shell only &mdash; no biography content has been drafted or auto-generated.
-      </div>
+  <section class="v3-about-hero">
+    <div class="v3-wrap">
+      <span class="v3-about-eyebrow">About</span>
+      <h1>Why I Built SOLVE</h1>
     </div>
   </section>
 
+  <section class="v3-about-body">
+    <div class="v3-wrap v3-about-grid">
+      <div class="v3-about-copy">
+        <p>I have spent years around sales organizations, close enough to see who was actually selling the most and to watch managers develop real instincts about their people. But the production numbers alone could never explain why. They couldn't tell you what a specific person was good at, where they struggled, or where a manager's limited coaching time would make the biggest difference.</p>
+
+        <p>Most training tried to solve this by teaching everyone the same material at the same time, regardless of what they individually needed. And even the best managers, the ones who genuinely wanted to observe, role-play, and coach every person on their team, ran into the same wall: there are only so many hours in a day. You cannot personally watch and coach ten or twenty people through every conversation they have.</p>
+
+        <p>SOLVE grew out of a simple idea. An organization should be able to:</p>
+
+        <ul class="v3-about-pillars">
+          <li><strong>Measure</strong> performance in a consistent, structured way instead of relying on gut feel</li>
+          <li><strong>Identify</strong> where the real opportunity is for each individual person</li>
+          <li><strong>Provide</strong> meaningful practice, not generic content everyone sits through the same way</li>
+          <li><strong>Recognize</strong> achievement so growth is visible and worth pursuing</li>
+          <li><strong>Give management</strong> better information, without ever replacing the human manager</li>
+        </ul>
+
+        <p>That last part matters most to me. SOLVE was never built to take the manager out of the equation. It was built to give that manager more useful information, faster, so their time and attention go where they can make the greatest difference. The system measures the conversations behind the numbers. The manager still does the managing.</p>
+
+        <h2>Where this came from</h2>
+        <p>My background is in sales, most directly in mortgage and lending, including leading inside sales teams where discovery, objection handling, and closing weren't abstract concepts, they were the difference between a good month and a bad one. That experience is where the SOLVE method itself came from: a structured, diagnosis-led approach to discovery conversations that I have written about at length in the SOLVE Framework book series.</p>
+
+        <p>Writing those books forced me to turn instinct into a teachable framework. Building the SOLVE platform is the natural extension of that same work: taking a framework that lived in books and coaching sessions and turning it into something a team can practice against every day, with real measurement behind it.</p>
+
+        <h2>What I believe</h2>
+        <p>Practice, not passive training, is what changes performance. Measurement, not guesswork, is what tells you where to focus. And technology should make good managers more effective, not replace what only a person can do. That is the philosophy behind everything on this platform.</p>
+      </div>
+
+      <aside class="v3-about-side">
+        <h3>The SOLVE Books</h3>
+        <ul>
+          <li>The SOLVE Framework methodology series, written by Wade Skrimager, laying out the discovery-led approach behind the platform.</li>
+          <li>Read the full book series for the complete methodology.</li>
+        </ul>
+        <div class="v3-about-links">
+          <a href="books.html" data-testid="link-about-books">Read the Books</a>
+          <a class="v3-about-link-ghost" href="methodology.html" data-testid="link-about-methodology">See the Methodology</a>
+        </div>
+      </aside>
+    </div>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <a href="/" class="footer-logo" aria-label="The SOLVE Framework - Home">
-        <img src="/solve-wordmark-bigtag-transparent.png" alt="SOLVE Framework - Practice. Performance. Period." class="footer-wordmark">
+<footer class="v3-footer">
+  <div class="v3-wrap v3-footer-grid">
+    <div class="v3-footer-brand">
+      <a href="/" aria-label="SOLVE Framework home">
+        <img src="/solve-wordmark-bigtag-transparent.png" alt="SOLVE Framework" style="max-width:180px; display:block;">
       </a>
-      <p>&copy; 2026 Wade Skrimager. All rights reserved.</p>
+      <p class="tagline">Practice. Performance. Period.</p>
+      <p class="copyright">&copy; 2026 The SOLVE Framework&trade;. All rights reserved.</p>
     </div>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="methodology.html">Methodology</a>
-      <a href="certification.html">Certification</a>
-      <a href="manager-dashboard.html">Manager Dashboard</a>
-      <a href="why-solve-works.html">Why SOLVE Works</a>
-      <a href="research.html">Research</a>
-      <a href="conflict-resolution.html">Conflict Resolution</a>
-      <a href="about-wade.html">About Wade</a>
-      <a href="books.html">Books</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="faq.html">FAQ</a>
-      <a href="https://training.solveframework.com/#/signup">Get Started</a>
-      <a href="https://training.solveframework.com/admin/login">Vault</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-of-service.html">Terms of Service</a>
-      <a href="trademark-guidelines.html">Trademark Guidelines</a>
-    </nav>
+    <div class="v3-footer-links">
+      <div class="v3-footer-col">
+        <h2>Product</h2>
+        <a href="index.html#command-center" data-testid="link-footer-command-center">Command Center</a>
+        <a href="certification.html" data-testid="link-footer-academy">Academy &amp; Certification</a>
+        <a href="methodology.html" data-testid="link-footer-methodology">Methodology</a>
+        <span data-testid="text-footer-candidate-screening" style="color:rgba(255,255,255,.45)">Candidate Screening (coming soon)</span>
+        <a href="pricing.html" data-testid="link-footer-pricing">Pricing</a>
+      </div>
+      <div class="v3-footer-col">
+        <h2>Resources</h2>
+        <a href="books.html" data-testid="link-footer-books">Books</a>
+        <a href="research.html" data-testid="link-footer-research">Research</a>
+        <a href="faq.html" data-testid="link-footer-faq">FAQ</a>
+        <a href="why-solve-works.html" data-testid="link-footer-why-solve-works">Why SOLVE Works</a>
+        <a href="conflict-resolution.html" data-testid="link-footer-conflict-resolution">Conflict Resolution</a>
+      </div>
+      <div class="v3-footer-col">
+        <h2>Company</h2>
+        <a href="about-wade.html" data-testid="link-footer-about-wade" aria-current="page">About Wade</a>
+        <a href="mailto:hello@solveframework.com" data-testid="link-footer-contact">Contact</a>
+      </div>
+      <div class="v3-footer-col">
+        <h2>Existing Users</h2>
+        <a href="https://training.solveframework.com/#/login" data-testid="link-footer-login">Login</a>
+        <a href="https://training.solveframework.com/#/practice" data-testid="link-footer-practice">Practice</a>
+        <a href="https://training.solveframework.com/#/command-center" data-testid="link-footer-command-center-login">Command Center</a>
+      </div>
+      <div class="v3-footer-col">
+        <h2>Legal</h2>
+        <a href="privacy-policy.html" data-testid="link-footer-privacy">Privacy Policy</a>
+        <a href="terms-of-service.html" data-testid="link-footer-terms">Terms of Service</a>
+        <a href="trademark-guidelines.html" data-testid="link-footer-trademark">Trademark Guidelines</a>
+      </div>
+    </div>
+  </div>
+  <div class="v3-wrap v3-footer-bottom">
+    <p>SOLVE Framework&trade;</p>
+    <p class="copy">Practice. Performance. Period. &copy; 2026 The SOLVE Framework&trade;. All rights reserved.</p>
   </div>
 </footer>
 
@@ -147,6 +230,31 @@
 })();
 </script>
 
-<script src="script.js"></script>
+<script>
+(function(){
+  var header = document.getElementById('site-header');
+  var toggle = document.getElementById('nav-toggle');
+  toggle.addEventListener('click', function(){
+    var open = header.getAttribute('data-menu-open') === 'true';
+    header.setAttribute('data-menu-open', open ? 'false' : 'true');
+    toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+  });
+  document.querySelectorAll('.v3-nav-item').forEach(function(item){
+    var btn = item.querySelector('button');
+    btn.addEventListener('click', function(){
+      var isOpen = item.getAttribute('data-open') === 'true';
+      document.querySelectorAll('.v3-nav-item').forEach(function(i){ i.setAttribute('data-open','false'); i.querySelector('button').setAttribute('aria-expanded','false'); });
+      item.setAttribute('data-open', isOpen ? 'false' : 'true');
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.v3-nav-item')) {
+      document.querySelectorAll('.v3-nav-item').forEach(function(i){ i.setAttribute('data-open','false'); i.querySelector('button').setAttribute('aria-expanded','false'); });
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
