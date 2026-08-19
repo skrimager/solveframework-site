@@ -95,36 +95,6 @@
   if (y) y.textContent = new Date().getFullYear();
 })();
 
-// ROI calculator: how many months of the dashboard does one extra sale cover?
-// Reference rate is the Office tier at today's locked rate ($583.50/mo), the tier
-// most teams land in. Copy/display only — no billing logic.
-(function () {
-  var input = document.getElementById('roi-deal');
-  var result = document.getElementById('roi-result');
-  if (!input || !result) return;
-
-  var DASHBOARD_MONTHLY = 583.50;
-  var DEFAULT_MSG = 'One extra sale covers months of your dashboard, then keeps paying.';
-
-  function update() {
-    var deal = parseFloat(input.value);
-    if (!deal || deal <= 0) {
-      result.textContent = DEFAULT_MSG;
-      return;
-    }
-    var months = deal / DASHBOARD_MONTHLY;
-    var dealText = '$' + Math.round(deal).toLocaleString('en-US');
-    if (months >= 12) {
-      result.textContent = 'One ' + dealText + ' sale covers more than a full year of the Office dashboard at today’s locked rate ($583.50/mo). The math already made the decision.';
-    } else {
-      var rounded = Math.round(months * 10) / 10;
-      result.textContent = 'One ' + dealText + ' sale covers about ' + rounded + ' month' + (rounded === 1 ? '' : 's') + ' of the Office dashboard at today’s locked rate ($583.50/mo).';
-    }
-  }
-
-  input.addEventListener('input', update);
-})();
-
 // Request Access lead form: open modal, submit to the training platform API,
 // show inline success/error without a page reload.
 (function () {
