@@ -59,22 +59,23 @@ def write_page(fname, title, description, body):
     print(f'Wrote {fname}')
 
 # FAQ content sourced strictly from facts already published on:
-# - index.html #pricing section (seat tiers, dashboard, ROI, credits, referral)
-# - terms-of-service.html (billing/cancellation, practice-hour limits, credit rules)
+# - index.html #pricing section (seat tiers, Command Center inclusion, credits, referral)
+# - terms-of-service.html (billing, cancellation, practice-hour limits, credit rules)
 # - index.html #platform, #framework, #leadership sections (product facts)
 faqs = [
     ("What is The SOLVE Framework?", "The SOLVE Framework is a five-step, consultative approach to discovery and leadership: Situation, Open with Questions, Listen for the Outcome, Visualize Success, and Engineer the Solution. The SOLVE Platform&trade; lets your team practice it in realistic, AI-powered conversations and get scored against that same published rubric."),
-    ("How much does a consultant seat cost?", "Seats are billed monthly per seat, based on your total seat count: $49/seat for Team (1-5 seats), $45/seat for Office (6-20 seats), and $41/seat for Company (21-35 seats). Enterprise (36+ seats) is a custom quote. Each seat includes up to 10 hours of practice session time per calendar month."),
-    ("Is there a free trial?", "Yes. Every team member gets one free practice session with no credit card required. A five-person team can run five real, scored practice conversations before spending a dollar. After that, billing is monthly and you can cancel anytime."),
-    ("Do I need the Manager Dashboard to practice?", "No. The Manager Dashboard is an optional add-on at every tier and is not required to practice. A manager who wants to practice personally simply adds their own consultant seat at the normal per-seat rate."),
+    ("How much does a consultant seat cost?", "Consultant seats are billed monthly per person: $129 for Team (1 to 5 people), $115 for Office (6 to 15 people), and $99 for Company (16 to 21 people). Enterprise pricing is custom for 22+ people. The Command Center is included with every consultant seat subscription. Each seat includes up to 10 hours of practice session time per calendar month."),
+    ("What is the 14-Day Team Evaluation?", "The 14-Day Team Evaluation is a one-time paid evaluation for teams that want to run a real 14-day evaluation, see real results, then decide. Public pricing is $249 for up to 5 people, then $50 per additional person through 10 participants. Teams of 11+ should contact sales."),
+    ("Can I try a scenario before choosing a subscription?", "Yes. Free Scenario is a separate single practice-scenario demo with no credit card. It is distinct from the paid 14-Day Team Evaluation."),
+    ("Is the Command Center included?", "Yes. The Command Center is included with every consultant seat subscription. It is not a separate add-on."),
     ("Can I cancel anytime?", "Yes. Subscriptions renew automatically unless cancelled, and you can cancel at any time. Cancelling stops future billing, but it does not refund amounts already charged, except where required by law or separately stated at the time of purchase."),
     ("Is there a limit on how much I can practice?", "Each consultant seat includes up to 10 hours of practice session time per calendar month, which keeps per-seat pricing low. If a seat reaches its monthly limit, additional practice sessions may be paused for the rest of that calendar month."),
     ("Can I upload real calls or transcripts to get scored?", "Yes. You can upload real call recordings, transcripts, or text/email exchanges and get them scored by SOLVE Coach&trade; against the same five-step rubric your team certifies on. This is limited to 20 submissions per consultant seat per calendar month, and you're responsible for having the right to any recording you submit, including consent where required by law."),
     ("What is the certification path?", "The SOLVE Academy certification track runs Beginner &rarr; Intermediate &rarr; Advanced &rarr; Certified. Each level requires a score of 85% or better to advance. Passing the Expert-level exam earns official SOLVE Framework Certification, a certificate, and a challenge coin."),
     ("Does SOLVE cover conflict management, or only sales discovery?", "Both. Every seat includes two tracks: Consultation &amp; Discovery and Conflict Resolution (SOLVE Leadership&trade;). Conflict Resolution applies the same five-step method to upset customer service, employee grievances, and peer-to-peer team conflict, with its own certification path."),
     ("Do I get credit back as my team improves?", "Yes. Certification milestones (SOLVE Certified Consultant, Conflict Management Certified, Cross-Industry Certified, and Master SOLVE Academy Consultant) each earn a $50 account credit, up to $200 per consultant. Credits apply automatically to future invoices, can cover up to 50% of a single invoice, and are earned only by consultants on seats active for at least 60 days. Credits carry no cash value, are non-transferable and non-refundable, and expire 12 months after issuance."),
-    ("Is there a referral program?", "Yes. If a colleague sets up their own team and dashboard because of you, mention your company in the Request Access form. Once their account reaches its 60th active day, you receive a $100 credit automatically. There's no limit on how many times this can happen."),
-    ("What if my industry isn't covered yet?", "If your business isn't already in the conversation library, SOLVE will build five custom scenarios for your specific industry at no additional cost, included with any account running the Manager Dashboard."),
+    ("Is there a referral program?", "Yes. If a colleague sets up their own team subscription because of you, mention your company in the Request Access form. Once their account reaches its 60th active day, you receive a $100 credit automatically. There's no limit on how many times this can happen."),
+    ("What if my industry isn't covered yet?", "If your business isn't already in the conversation library, SOLVE will build five custom scenarios for your specific industry at no additional cost, included with any active paid consultant seat subscription."),
 ]
 
 items_html = "\n".join(
@@ -102,7 +103,7 @@ body = f"""  <section class="subpage-hero">
   <section class="section">
     <div class="wrap center">
       <div class="book-actions" style="justify-content:center;">
-        <a href="https://training.solveframework.com" class="btn btn-primary btn-lg" data-testid="link-faq-demo-cta">Try the Demo</a>
+        <a href="https://training.solveframework.com/#/demo" class="btn btn-primary btn-lg" data-testid="link-faq-demo-cta">Free Scenario</a>
         <a href="pricing.html" class="btn btn-outline-invert btn-lg" data-testid="link-faq-pricing-cta">See Pricing</a>
       </div>
     </div>
@@ -112,6 +113,6 @@ body = f"""  <section class="subpage-hero">
 write_page(
     'faq.html',
     'FAQ',
-    'Frequently asked questions about SOLVE Platform pricing, free trial, cancellation, certification, and conflict resolution training.',
+    'Frequently asked questions about SOLVE Platform pricing, the 14-Day Team Evaluation, cancellation, certification, and conflict resolution practice.',
     body,
 )
