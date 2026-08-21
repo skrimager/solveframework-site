@@ -21,6 +21,7 @@
 <meta name="theme-color" content="#05162D">
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="homepage-v3.css" />
+<link rel="stylesheet" href="pricing-reference.css" />
 </head>
 <body class="v3-page">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -353,35 +354,75 @@
   </section>
 
   <!-- SECTION 12: PRICING -->
-  <section class="v3-section v3-light" aria-labelledby="pricing-title" style="background:var(--color-surface-2)">
-    <div class="v3-wrap">
-      <h2 id="pricing-title" class="v3-h2">BUILT FOR REAL SALES TEAMS.</h2>
-      <p class="v3-lede">Every subscription tier includes the Command Center.</p>
-      <div class="v3-pricing-cards">
-        <div class="v3-price-card" data-testid="pricing-tier-team">
-          <h3>TEAM</h3>
-          <div class="v3-price-num">$129</div><div class="v3-price-unit">per person / month</div>
-          <div class="v3-price-range">1 to 5 people</div>
-        </div>
-        <div class="v3-price-card v3-price-card--featured" data-testid="pricing-tier-office">
-          <h3>OFFICE</h3>
-          <div class="v3-price-num">$115</div><div class="v3-price-unit">per person / month</div>
-          <div class="v3-price-range">6 to 15 people</div>
-        </div>
-        <div class="v3-price-card" data-testid="pricing-tier-company">
-          <h3>COMPANY</h3>
-          <div class="v3-price-num">$99</div><div class="v3-price-unit">per person / month</div>
-          <div class="v3-price-range">16 to 21 people</div>
-        </div>
-        <div class="v3-price-card" data-testid="pricing-tier-enterprise">
-          <h3>ENTERPRISE</h3>
-          <div class="v3-price-num">Custom</div><div class="v3-price-unit">pricing</div>
-          <div class="v3-price-range">22+ people</div>
-        </div>
+  <section class="v3-section v3-light homepage-pricing" aria-labelledby="pricing-title">
+    <div class="v3-wrap homepage-pricing__wrap">
+      <div class="pricing-reference-heading">
+        <h2 id="pricing-title">SIMPLE PRICING. ALL-INCLUSIVE.</h2>
+        <p>No upgrades. No feature gates. No surprises.</p>
       </div>
-      <div class="v3-btn-row">
-        <a class="v3-btn" href="pricing.html" data-testid="link-pricing-see-pricing">SEE FULL PRICING &rarr;</a>
-        <a class="v3-btn v3-btn--ghost" href="https://training.solveframework.com/#/signup" data-testid="link-pricing-test-my-team">TEST MY TEAM &rarr;</a>
+
+      <figure class="pricing-reference-image">
+        <img src="assets/pricing-reference.jpeg" alt="SOLVE platform features and 14-Day Team Evaluation details." />
+      </figure>
+
+      <div class="pricing-reference-grid" aria-label="SOLVE subscription tiers">
+        <article class="pricing-reference-card pricing-reference-card--team" data-testid="pricing-tier-team">
+          <div class="pricing-reference-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="17" r="6"/><path d="M12 38c0-6.1 5.4-11 12-11s12 4.9 12 11M8 22c-3.1 1.5-5 4.6-5 8m37-8c3.1 1.5 5 4.6 5 8M13 14c-3 0-5.5 2.5-5.5 5.5S10 25 13 25m22-11c3 0 5.5 2.5 5.5 5.5S38 25 35 25"/></svg>
+          </div>
+          <h3>TEAM</h3>
+          <p class="pricing-reference-range">1-5 people</p>
+          <div class="pricing-reference-rule"></div>
+          <p class="pricing-reference-price">$129</p>
+          <p class="pricing-reference-unit">per person / month</p>
+          <p class="pricing-reference-included">Command Center included</p>
+          <p class="pricing-reference-description">Perfect for small teams getting started with better conversations and real results.</p>
+        </article>
+
+        <article class="pricing-reference-card pricing-reference-card--office" data-testid="pricing-tier-office">
+          <span class="pricing-reference-badge">MOST POPULAR</span>
+          <div class="pricing-reference-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="17" r="6"/><path d="M12 38c0-6.1 5.4-11 12-11s12 4.9 12 11M8 22c-3.1 1.5-5 4.6-5 8m37-8c3.1 1.5 5 4.6 5 8M13 14c-3 0-5.5 2.5-5.5 5.5S10 25 13 25m22-11c3 0 5.5 2.5 5.5 5.5S38 25 35 25"/></svg>
+          </div>
+          <h3>OFFICE</h3>
+          <p class="pricing-reference-range">6-15 people</p>
+          <div class="pricing-reference-rule"></div>
+          <p class="pricing-reference-price">$115</p>
+          <p class="pricing-reference-unit">per person / month</p>
+          <p class="pricing-reference-included">Command Center included</p>
+          <p class="pricing-reference-description">Built for growing teams who want to develop stronger skills and drive more consistent results.</p>
+        </article>
+
+        <article class="pricing-reference-card pricing-reference-card--company" data-testid="pricing-tier-company">
+          <div class="pricing-reference-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M12 40V13h24v27M19 40V31h10v9M18 20h3m6 0h3m-12 6h3m6 0h3M7 40h34"/><circle cx="38" cy="10" r="4" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>COMPANY</h3>
+          <p class="pricing-reference-range">16-21 people</p>
+          <div class="pricing-reference-rule"></div>
+          <p class="pricing-reference-price">$99</p>
+          <p class="pricing-reference-unit">per person / month</p>
+          <p class="pricing-reference-included">Command Center included</p>
+          <p class="pricing-reference-description">For established teams focused on performance, accountability, and sustainable growth.</p>
+        </article>
+
+        <article class="pricing-reference-card pricing-reference-card--enterprise" data-testid="pricing-tier-enterprise">
+          <div class="pricing-reference-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M12 40V13h24v27M19 40V31h10v9M18 20h3m6 0h3m-12 6h3m6 0h3M7 40h34"/></svg>
+          </div>
+          <h3>ENTERPRISE</h3>
+          <p class="pricing-reference-range">22+ people</p>
+          <div class="pricing-reference-rule"></div>
+          <p class="pricing-reference-price pricing-reference-price--custom">CUSTOM</p>
+          <p class="pricing-reference-unit">let's talk</p>
+          <p class="pricing-reference-included">Command Center included</p>
+          <p class="pricing-reference-description">For larger organizations with unique needs. We'll build the right solution together.</p>
+        </article>
+      </div>
+
+      <div class="pricing-reference-actions">
+        <a class="v3-btn" href="pricing.html" data-testid="link-pricing-see-pricing">SEE FULL PRICING</a>
+        <a class="v3-btn v3-btn--ghost" href="https://training.solveframework.com/#/signup" data-testid="link-pricing-test-my-team">START EVALUATION</a>
       </div>
     </div>
   </section>
